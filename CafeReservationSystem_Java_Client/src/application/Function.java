@@ -25,6 +25,7 @@ public class Function {
 	public InsertSQL idb = new InsertSQL();
 	
 	public Function() {
+		/*
 		try {
 			inStream = socket.getInputStream();
 			dataInStream = new DataInputStream(inStream);
@@ -33,6 +34,7 @@ public class Function {
 		} catch	(IOException e) {
 			System.out.println("IOException이래");
 		}
+		*/
 	}
 	
 	public String readServer() throws IOException {
@@ -45,7 +47,7 @@ public class Function {
 	//프레임의 장면을 바꿔주는 메소드
 	public void changeScene(String string, Control object) {
 		try {
-			// SignUp_2.fxml의 Scene 가져오기
+			// string의 Scene 가져오기
 			Parent parent = FXMLLoader.load(getClass().getResource(string));
 			Scene scene = new Scene(parent);
 			// object의 윈도우 가져오기
