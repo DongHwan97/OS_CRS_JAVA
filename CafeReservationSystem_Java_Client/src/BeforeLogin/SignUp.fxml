@@ -38,6 +38,9 @@
                                  <HBox.margin>
                                     <Insets right="30.0" />
                                  </HBox.margin>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </TextField>
                            </children>
                         </HBox>
@@ -50,6 +53,9 @@
                                  <HBox.margin>
                                     <Insets bottom="10.0" />
                                  </HBox.margin>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </TextField>
                               <HBox alignment="CENTER" prefHeight="69.0" prefWidth="130.0">
                                  <children>
@@ -75,6 +81,9 @@
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -87,6 +96,9 @@
                                  <HBox.margin>
                                     <Insets bottom="10.0" />
                                  </HBox.margin>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -116,6 +128,9 @@
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
+                                       <effect>
+                                          <DropShadow color="#0029ff" />
+                                       </effect>
                                     </Label>
                                  </children>
                               </HBox>
@@ -132,6 +147,9 @@
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
+                                       <effect>
+                                          <DropShadow color="#0029ff" />
+                                       </effect>
                                     </TextField>
                                     <Label prefHeight="24.0" prefWidth="35.0" text="-">
                                        <font>
@@ -143,6 +161,9 @@
                                        <padding>
                                           <Insets left="13.0" />
                                        </padding>
+                                       <effect>
+                                          <DropShadow color="#0029ff" />
+                                       </effect>
                                     </Label>
                                     <TextField alignment="CENTER" prefHeight="26.0" prefWidth="80.0" promptText="뒤 7자리">
                                        <font>
@@ -151,6 +172,9 @@
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
+                                       <effect>
+                                          <DropShadow color="#0029ff" />
+                                       </effect>
                                     </TextField>
                                  </children>
                               </HBox>
@@ -168,13 +192,16 @@
                   </GridPane>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="확인">
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="확인">
                            <font>
                               <Font size="18.0" />
                            </font>
                            <HBox.margin>
                               <Insets top="10.0" />
                            </HBox.margin>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </Button>
                      </children>
                   </HBox>
@@ -200,6 +227,9 @@
                                  <HBox.margin>
                                     <Insets bottom="20.0" />
                                  </HBox.margin>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -209,6 +239,9 @@
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -225,6 +258,9 @@
                                  <HBox.margin>
                                     <Insets bottom="20.0" />
                                  </HBox.margin>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </TextField>
                            </children>
                         </HBox>
@@ -234,6 +270,9 @@
                                  <font>
                                     <Font size="18.0" />
                                  </font>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </TextField>
                            </children>
                         </HBox>
@@ -253,9 +292,6 @@
          </rowConstraints>
       </GridPane>
    </center>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -277,6 +313,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0029ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>

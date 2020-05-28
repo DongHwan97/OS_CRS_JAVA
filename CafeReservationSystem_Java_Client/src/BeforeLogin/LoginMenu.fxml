@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
@@ -11,19 +12,35 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="다온 Cafe">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="150.0">
+               <children>
+                  <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../back.PNG" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="다온 Cafe">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#0029ff" />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </HBox>
    </top>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <center>
       <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -58,6 +75,9 @@
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -65,10 +85,13 @@
                   </GridPane>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField prefHeight="33.0" prefWidth="317.0">
+                        <TextField fx:id="pwFIeld" prefHeight="33.0" prefWidth="317.0">
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </TextField>
                      </children>
                   </HBox>
@@ -84,6 +107,9 @@
                                  <font>
                                     <Font size="20.0" />
                                  </font>
+                                 <effect>
+                                    <DropShadow color="#0029ff" />
+                                 </effect>
                               </Label>
                            </children>
                         </HBox>
@@ -101,10 +127,13 @@
                   </GridPane>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField prefHeight="33.0" prefWidth="317.0">
+                        <TextField fx:id="idField" prefHeight="33.0" prefWidth="317.0">
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </TextField>
                      </children>
                   </HBox>
@@ -112,10 +141,13 @@
             </VBox>
             <HBox alignment="CENTER" prefHeight="228.0" prefWidth="500.0" GridPane.rowIndex="3">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="35.0" prefWidth="317.0" text="Login">
+                  <Button fx:id="loginBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="317.0" text="Login">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
+                     <effect>
+                        <DropShadow color="#0029ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
@@ -138,6 +170,9 @@
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </Label>
                      </children>
                   </HBox>
@@ -147,6 +182,9 @@
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </Label>
                      </children>
                   </HBox>
@@ -159,6 +197,9 @@
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0029ff" />
+                           </effect>
                         </Label>
                      </children>
                   </HBox>

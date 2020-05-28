@@ -19,16 +19,19 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
+		/*
 		try {
-			socket = new Socket("192.168.0.25", 7875);
+			socket = new Socket("192.168.219.128", 7875);
 		} catch (IOException e) {
 			System.out.println("Server is not opened");
 		}
+		*/
 		try {
-			BorderPane root = new BorderPane();
+			Parent root = FXMLLoader.load(getClass().getResource("/BeforeLogin/StartMenu.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("다온 Cafe 예약 시스템");
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
