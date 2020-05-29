@@ -7,7 +7,6 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MainMenuController">
    <top>
@@ -17,6 +16,9 @@
                <font>
                   <Font size="40.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </Label>
          </children>
       </HBox>
@@ -45,19 +47,25 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField alignment="CENTER" prefHeight="42.0" prefWidth="147.0" text="UserID">
+                        <TextField fx:id="idField" alignment="CENTER" prefHeight="42.0" prefWidth="147.0" text="UserID">
                            <font>
                               <Font size="17.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </TextField>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button fx:id="mypageBtn" blendMode="SCREEN" mnemonicParsing="false" text="마이 페이지">
+                        <Button fx:id="mypageBtn" mnemonicParsing="false" text="마이 페이지">
                            <font>
                               <Font size="22.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </Button>
                      </children>
                   </HBox>
@@ -65,37 +73,49 @@
             </GridPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="자리 확인 및 예약">
+                  <Button fx:id="reservationBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="자리 확인 및 예약">
                      <font>
                         <Font size="22.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="카페 메뉴">
+                  <Button fx:id="menuBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="카페 메뉴">
                      <font>
                         <Font size="22.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="홈페이지 이동">
+                  <Button fx:id="homepageBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="홈페이지 이동">
                      <font>
                         <Font size="22.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="로그아웃">
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="로그아웃">
                      <font>
                         <Font size="22.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
@@ -105,7 +125,4 @@
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
 </BorderPane>

@@ -8,15 +8,11 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MyPageController">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -38,6 +34,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>
@@ -60,15 +59,21 @@
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </TextField>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="44.0" prefWidth="290.0" text="예약취소">
+                  <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="290.0" text="예약취소">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>

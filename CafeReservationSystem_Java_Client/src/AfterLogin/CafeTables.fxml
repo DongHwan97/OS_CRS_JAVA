@@ -9,15 +9,11 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MyPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.CafeTablesController">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,6 +35,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>
@@ -48,55 +47,85 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="CENTER" layoutX="26.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
+            <TextField fx:id="double_1" alignment="CENTER" layoutX="26.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="182.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
+            <TextField fx:id="double_2" alignment="CENTER" layoutX="182.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="336.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
+            <TextField fx:id="double_3" alignment="CENTER" layoutX="336.0" layoutY="80.0" prefHeight="37.0" prefWidth="137.0" text="2인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="95.0" layoutY="227.0" prefHeight="117.0" prefWidth="137.0" text="4인석">
+            <TextField fx:id="quadruple_1" alignment="CENTER" layoutX="95.0" layoutY="227.0" prefHeight="117.0" prefWidth="137.0" text="4인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="268.0" layoutY="227.0" prefHeight="117.0" prefWidth="137.0" text="4인석">
+            <TextField fx:id="quadruple_2" alignment="CENTER" layoutX="268.0" layoutY="227.0" prefHeight="117.0" prefWidth="137.0" text="4인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="14.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
+            <TextField fx:id="single_1" alignment="CENTER" layoutX="26.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="118.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
+            <TextField fx:id="single_2" alignment="CENTER" layoutX="118.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="212.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
+            <TextField fx:id="single_3" alignment="CENTER" layoutX="212.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="305.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
+            <TextField fx:id="single_4" alignment="CENTER" layoutX="305.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
-            <TextField alignment="CENTER" layoutX="396.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
+            <TextField fx:id="single_5" alignment="CENTER" layoutX="396.0" layoutY="463.0" prefHeight="39.0" prefWidth="77.0" text="1인석">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#0022ff" />
+               </effect>
             </TextField>
          </children>
       </Pane>

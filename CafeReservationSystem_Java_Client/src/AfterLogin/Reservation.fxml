@@ -9,12 +9,8 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.ReservationController">
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,6 +32,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>
@@ -70,13 +69,16 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
                            <HBox.margin>
                               <Insets right="30.0" top="15.0" />
                            </HBox.margin>
                            <font>
                               <Font size="16.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </Button>
                      </children>
                   </HBox>
@@ -89,6 +91,9 @@
                            <HBox.margin>
                               <Insets left="30.0" top="15.0" />
                            </HBox.margin>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </TextField>
                      </children>
                   </HBox>
