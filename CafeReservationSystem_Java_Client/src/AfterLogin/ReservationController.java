@@ -12,5 +12,4 @@ public class ReservationController implements Initializable {
 		
 		
 	}
-
 }

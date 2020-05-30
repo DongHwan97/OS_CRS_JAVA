@@ -46,7 +46,7 @@ public class Function {
 		dataOutStream.writeUTF(msg);
 	}
 
-	//프레임의 장면을 바꿔주는 메소드
+	//윈도우의 Scene을 바꿔주는 메소드
 	public void changeScene(String string, Control object) {
 		
 		try {
