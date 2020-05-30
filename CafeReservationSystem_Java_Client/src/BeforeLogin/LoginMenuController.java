@@ -11,21 +11,59 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 public class LoginMenuController implements Initializable {
 
 	Function f = new Function();
-
+	
+	DropShadow teduri1 = new DropShadow();
+	DropShadow teduri2 = new DropShadow();
+	
+	Color teduri = Color.web("#0022ff");
+	
 	@FXML Button loginBtn;
 	
 	@FXML TextField idField;
 	@FXML TextField pwField;
+	
+	@FXML Rectangle backBorder1;
+	@FXML Rectangle backBorder2;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
 		loginBtn.setOnAction(event -> btnClicked(event));
+		
 		idField.setOnAction(event -> enterPressed(event));
 		pwField.setOnAction(event -> enterPressed(event));
+		
+		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
+		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		
+		backBorder1.setOnMouseExited(event -> mouseExited(event));
+		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		
+		backBorder1.setOnMousePressed(event -> mousePressed(event));
+		backBorder2.setOnMouseExited(event -> mousePressed(event));
+		
+		teduri1.setColor(teduri);
+		teduri2.setColor(teduri);
+	}
+	
+	public void mouseEntered(MouseEvent e) {
+		
+	}
+	
+	public void mouseExited(MouseEvent e) {
+		
+	}
+	
+	public void mousePressed(MouseEvent e) {
+		
 	}
 
 	public void btnClicked(ActionEvent e) {
