@@ -9,7 +9,7 @@ public class InsertSQL {
 
 	Connection con = null;
 	Statement state = null;
-	String url = "jdbc:mysql://127.0.0.1/hong?serverTimezone=Asia/Seoul&useSSL=false";
+	String url = "jdbc:mysql://localhost:3365/USER?serverTimezone=Asia/Seoul&useSSL=false";
 	String user = "root";
 	String password = "1234";
 	
