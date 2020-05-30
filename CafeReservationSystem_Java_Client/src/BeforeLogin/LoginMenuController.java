@@ -59,7 +59,7 @@ public class LoginMenuController implements Initializable {
 	}
 	
 	public void mouseExited(MouseEvent e) {
-		
+		backBorder1.setEffect(teduri1);
 	}
 	
 	public void mousePressed(MouseEvent e) {
