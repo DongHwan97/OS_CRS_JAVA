@@ -72,7 +72,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
+                        <Button fx:id="myPageBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
                            <HBox.margin>
                               <Insets right="30.0" top="15.0" />
                            </HBox.margin>
@@ -87,7 +87,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField alignment="CENTER" prefHeight="32.0" prefWidth="133.0" text="1번째 테이블">
+                        <TextField fx:id="tableInfo" alignment="CENTER" editable="false" prefHeight="32.0" prefWidth="133.0" text="1번째 테이블">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -152,7 +152,7 @@
             </GridPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="10:00  ~  12:00">
+                  <Button fx:id="firstTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="10:00  ~  12:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -161,7 +161,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="12:00  ~  14:00">
+                  <Button fx:id="secondTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="12:00  ~  14:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -170,7 +170,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="14:00  ~  16:00">
+                  <Button fx:id="ThirdTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="14:00  ~  16:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -179,7 +179,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="16:00  ~  18:00">
+                  <Button fx:id="fourthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="16:00  ~  18:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -188,7 +188,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="18:00  ~  20:00">
+                  <Button fx:id="fifthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="18:00  ~  20:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -196,7 +196,7 @@
                </children></HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="20:00  ~  22:00">
+                  <Button fx:id="sixthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="20:00  ~  22:00">
                      <font>
                         <Font size="27.0" />
                      </font>

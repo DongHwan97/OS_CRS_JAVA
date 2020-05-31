@@ -104,7 +104,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField alignment="CENTER" prefHeight="30.0" prefWidth="180.0" text="박정우님">
+                  <TextField alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="180.0" text="박정우님">
                      <font>
                         <Font size="15.0" />
                      </font>

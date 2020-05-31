@@ -7,6 +7,8 @@ import application.Function;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -24,8 +26,18 @@ public class ReservationController implements Initializable {
 	
 	@FXML ImageView back; 
 	
+	@FXML TextField tableInfo;
+	
 	@FXML Rectangle backBorder1;
 	@FXML Rectangle backBorder2;
+	
+	@FXML Button myPageBtn;
+	@FXML Button firstTime;
+	@FXML Button secondTime;
+	@FXML Button thirdTime;
+	@FXML Button fourthTime;
+	@FXML Button fifthTime;
+	@FXML Button sixthTime;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -54,7 +66,7 @@ public class ReservationController implements Initializable {
 	}
 	// 뒤로가기 이미지를 클릭했을 때
 	public void mousePressed(MouseEvent e) {
-		//f.changeScene("/AfterLogin/CafeTables.fxml", idField);
+		f.changeScene("/AfterLogin/CafeTables.fxml", myPageBtn);
 		back.setEffect(null);
 	}
 }

@@ -32,7 +32,7 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="nameField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0">
+                              <TextField fx:id="nameField" alignment="CENTER" editable="false" prefHeight="33.0" prefWidth="190.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -47,7 +47,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="idField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0">
+                              <TextField fx:id="idField" alignment="CENTER" editable="false" prefHeight="33.0" prefWidth="190.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -149,7 +149,7 @@
                         </HBox>
                         <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label text="생년원일">
+                              <Label text="생년월일">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -168,7 +168,7 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="pwField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0">
+                              <TextField fx:id="pwField" alignment="CENTER" editable="false" prefHeight="33.0" prefWidth="190.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -183,7 +183,7 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="birthField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0">
+                              <TextField fx:id="birthField" alignment="CENTER" editable="false" prefHeight="33.0" prefWidth="190.0">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 import application.Function;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,21 +22,21 @@ public class CafeTablesController implements Initializable {
 	
 	Color teduri = Color.web("#0022ff"); 
 	
-	@FXML ImageView back; 
+	@FXML ImageView back;
 	
 	@FXML Rectangle backBorder1;
 	@FXML Rectangle backBorder2;
 	
-	@FXML TextField single_1;
-	@FXML TextField single_2;
-	@FXML TextField single_3;
-	@FXML TextField single_4;
-	@FXML TextField single_5;
-	@FXML TextField double_1;
-	@FXML TextField double_2;
-	@FXML TextField double_3;
-	@FXML TextField quadruple_1;
-	@FXML TextField quadruple_2;
+	@FXML Button single_1;
+	@FXML Button single_2;
+	@FXML Button single_3;
+	@FXML Button single_4;
+	@FXML Button single_5;
+	@FXML Button double_1;
+	@FXML Button double_2;
+	@FXML Button double_3;
+	@FXML Button quadruple_1;
+	@FXML Button quadruple_2;
 	
 	
 	@Override

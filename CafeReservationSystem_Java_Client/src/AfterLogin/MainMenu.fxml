@@ -47,7 +47,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="idField" alignment="CENTER" prefHeight="42.0" prefWidth="147.0" text="UserID">
+                        <TextField fx:id="idField" alignment="CENTER" editable="false" prefHeight="42.0" prefWidth="147.0" text="UserID">
                            <font>
                               <Font size="17.0" />
                            </font>
