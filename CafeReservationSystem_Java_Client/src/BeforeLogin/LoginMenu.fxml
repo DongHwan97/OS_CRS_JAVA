@@ -167,22 +167,22 @@
                <children>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="회원가입">
-                           <padding>
-                              <Insets left="50.0" />
-                           </padding>
+                        <Label fx:id="signLabel" text="회원가입">
                            <font>
                               <Font size="17.0" />
                            </font>
                            <effect>
                               <DropShadow color="#0029ff" />
                            </effect>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Label text="ID찾기">
+                        <Label fx:id="idLabel" text="ID찾기">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -194,16 +194,16 @@
                   </HBox>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Label text="PW찾기">
-                           <padding>
-                              <Insets right="50.0" />
-                           </padding>
+                        <Label fx:id="pwLabel" text="PW찾기">
                            <font>
                               <Font size="17.0" />
                            </font>
                            <effect>
                               <DropShadow color="#0029ff" />
                            </effect>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
