@@ -89,6 +89,7 @@ public class LoginMenuController implements Initializable {
 	public void mousePressed(MouseEvent e) {
 		f.changeScene("/BeforeLogin/StartMenu.fxml", idField);
 		back.setEffect(null);
+		backBorder1.setEffect(teduri1);
 	}
 	
 	public void labelEntered(MouseEvent e) {
