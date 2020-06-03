@@ -30,21 +30,24 @@ public class SelectSQL {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			state = con.createStatement();
-			ResultSet result = state.executeQuery("SELECT * FROM user_info WHERE user_ID = '" + id + "'");
+			// select문 생성 후 DB에 질희한 결과를 ResultSet에 저장
+			ResultSet result = state.executeQuery("SELECT * FROM USER WHERE userID = '" + id + "'");
 
-			if (!result.next()) {
+			if (!result.next()) {	// 질의의 결과가 없다면 = 해당 아이디에 관한 정보가 없다면 = 중복되지 않는 아이디라면
 				con.close();
 				state.close();
-				return "OK";
+				return "OK";		// 확인 메시지 리턴
 			}
-			state.close();
-			con.close();
+			else {					// 중복되는 아이디라면
+				state.close();
+				con.close();
+				return "NO";		// 거절 메시지 리턴
+			}
 		} catch (SQLException e) {
-			return "SELECT 오류 : " + e.getMessage();
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";	// SQLException
 		}
-		return "NO";
 	}
-
+/*
 	// 로그인을 위해 해당 유저가 사용자 DB에 존재하는지
 	// 그리고 해당 유저가 어딘가에서 로그인 중인지 (login DB에 존재하는지)
 	public String login(String string) {
@@ -54,13 +57,14 @@ public class SelectSQL {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			state = con.createStatement();
+			// select문 생성 후 DB에 질희한 결과를 ResultSet에 저장
 			ResultSet result = state.executeQuery(
 					"SELECT * FROM user_info WHERE user_ID = '" + id + "' AND " + "user_PW = '" + pw + "'");
 			if (result.next()) {
-				/*
-				 * result = state.executeQuery("SELECT * FROM login_user WHERE user_ID = '" + id
-				 * + "'"); if (result.next()) { con.close(); state.close(); return "exist"; }
-				 */
+				
+				 result = state.executeQuery("SELECT * FROM login_user WHERE user_ID = '" + id
+				  + "'"); if (result.next()) { con.close(); state.close(); return "exist"; }
+				 
 				return "exist";
 			}
 			con.close();
@@ -71,63 +75,35 @@ public class SelectSQL {
 			return "SELECT 오류 : " + e.getMessage();
 		}
 	}
-
-	// 사용자가 회원가입을 하기 전에 본인확인을 하는 과정
-	// 사용자 DB에 이름과 주민번호만으로 SELECT해서 값이 존재하는지 확인
-	public String userCheck(String string) {
-
-		String splitString = string.split(":")[1];
-		String name = splitString.split("/")[0];
-		String jumin = splitString.split("/")[1];
-		try {
-			con = DriverManager.getConnection(url, user, password);
-			state = con.createStatement();
-			ResultSet result = state.executeQuery(
-					"SELECT * FROM user_info WHERE user_Name = '" + name + "' AND user_Jumin = '" + jumin + "'");
-			if (!result.next()) {
-				con.close();
-				state.close();
-				return "OK";
-			}
-			state.close();
-			con.close();
-		} catch (SQLException e) {
-			return "SELECT 오류 : " + e.getMessage();
-		}
-		return "NO";
-	}
+*/
 	// ID 찾기를 위해 사용자의 정보로
 	// 사용자 DB에 SELECT
 	public String findID(String string) {
-
 		String splitString = string.split(":")[1];
 		String name = splitString.split("/")[0];
 		String jumin = splitString.split("/")[1];
 		try {
 			con = DriverManager.getConnection(url, user, password);
-			System.out.println(name);
-			System.out.println(jumin);
 			state = con.createStatement();
-			System.out.println(name);
-			// SELECT * FROM user_info WHERE user_Name = '홍정인' AND user_Jumin = '9707231199119'
-			//"SELECT * FROM user_info WHERE user_ID = '" + id + "' AND " + "user_PW = '" + pw + "'"
-			ResultSet result = state.executeQuery("SELECT * FROM user_info WHERE user_Name = '" + name +
-					"' AND + user_Jumin = '" + jumin + "'");
-			System.out.println(name);
-			if (result.next()) {
-				String r = result.getString(2);
-				System.out.println(name);
+			// select문 생성 후 DB에 질희한 결과를 ResultSet에 저장
+			ResultSet result = state.executeQuery("SELECT * FROM USER WHERE userName = '" + name +
+					"' AND + userBirth = '" + jumin + "'");
+			
+			if (result.next()) {					// 질의의 결과가 있다면
+				String r = result.getString(1);		// String타입 r에 1번째 애트리뷰트 값 대입
 				con.close();
 				state.close();
 				result.close();
-				return r;
+				return r;							// r 리턴
 			}
-			state.close();
-			con.close();
+			else {									// 질의의 결과가 없다면
+				state.close();
+				con.close();
+				return "NO";						// 거절 메시지 리턴
+			}
 		} catch (SQLException e) {
-			e.getMessage();
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";
 		}
-		return "NO";
 	}
 
 	// PW 찾기를 위해 사용자의 정보로
@@ -141,20 +117,24 @@ public class SelectSQL {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			state = con.createStatement();
-			ResultSet result = state.executeQuery("SELECT * FROM user_info WHERE user_Name = '" + name
-					+ "' AND user_jumin = '" + jumin + "' AND user_ID = '" + id + "'");
-			if (result.next()) {
-				String r = result.getString(3);
+			// select문 생성 후 DB에 질희한 결과를 ResultSet에 저장
+			ResultSet result = state.executeQuery("SELECT * FROM USER WHERE userName = '" + name
+					+ "' AND userID = '" + id + "' AND userBirth = '" + jumin + "'");
+			
+			if (result.next()) {					// 질의의 결과가 있다면 
+				String r = result.getString(3);		// String타입 r에 3번째 애트리뷰트 값 대입
 				con.close();
 				state.close();
 				result.close();
-				return r;
+				return r;							// r 리턴
 			}
-			state.close();
-			con.close();
+			else {									// 질의의 결과가 없다면
+				state.close();
+				con.close();
+				return "NO";						// 거절 메시지 리턴
+			}
 		} catch (SQLException e) {
-
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";
 		}
-		return "NO";
 	}
 }

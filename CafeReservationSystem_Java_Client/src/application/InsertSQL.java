@@ -22,42 +22,24 @@ public class InsertSQL {
 		}
 	}
 	
-	//사용자 DB에 회원가입 하는 사용자 정보 저장
+	// 사용자 DB에 회원가입 하는 사용자 정보 저장
 	public String signUp(String string) {
 		String splitString = string.split(":")[1];
-		String name = splitString.split("/")[0];
-		String id = splitString.split("/")[1];
-		String pw = splitString.split("/")[2];
-		String tel = splitString.split("/")[3];
-		String jumin = splitString.split("/")[4];
+		String name = splitString.split("/")[0];				// 이름
+		String id = splitString.split("/")[1];					// id
+		String pw = splitString.split("/")[2];					// pw
+		String jumin = splitString.split("/")[3];				// 주민번호
 		
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			state = con.createStatement();
-			state.executeUpdate("INSERT INTO user_info VALUES ('" + name + "','"
-					+ id + "','" + pw + "','" + tel + "','" + jumin + "')");
-			state.close();
+			state.executeUpdate("INSERT INTO user_info VALUES ('" + name + "','"		// insert문 생성 후
+					+ id + "','" + pw + "','" + jumin + "')");							// DB 테이블에 삽입
+			state.close();																
 			con.close();
-			return "OK";
+			return "회원 정보 저장 완료!!";													// commit되면 완료 메시지 리턴
 		} catch(SQLException e) {
-			return "SELECT 오류 : " + e.getMessage();
-		}
-	}
-	
-	// login DB에 유저 ID 저장
-	public String login(String string) {
-		String splitString = string.split(":")[1];
-		String id = splitString.split("/")[0];
-		
-		try {
-			con = DriverManager.getConnection(url, user, password);
-			state = con.createStatement();
-			state.executeUpdate("INSERT INTO login_user VALUES ('" + id + "')");
-			state.close();
-			con.close();
-			return "OK";
-		} catch(SQLException e) {
-			return "SELECT 오류 : " + e.getMessage();
+			return "서버가 불안정합니다. 나중에 다시 이용해주세요!!";								// SQL 오류가 나면 서버가 불안정하다는 메시지 리턴
 		}
 	}
 }
