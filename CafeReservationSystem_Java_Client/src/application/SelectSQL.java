@@ -11,9 +11,9 @@ public class SelectSQL {
 
 	Connection con = null;
 	Statement state = null;
-	String url = "jdbc:mysql://127.0.0.1/hong?serverTimezone=Asia/Seoul&useSSL=false";
+	String url = "jdbc:mysql://localhost:1111/info?serverTimezone=Asia/Seoul&useSSL=false";
 	String user = "root";
-	String password = "1234";
+	String password = "1111";
 
 	public SelectSQL() {
 		try {
@@ -44,7 +44,7 @@ public class SelectSQL {
 				return "NO";		// 거절 메시지 리턴
 			}
 		} catch (SQLException e) {
-			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";	// SQLException
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";	// SQL 오류가 나면 서버가 불안정하다는 메시지 리턴
 		}
 	}
 /*
@@ -102,7 +102,7 @@ public class SelectSQL {
 				return "NO";						// 거절 메시지 리턴
 			}
 		} catch (SQLException e) {
-			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";	// SQL 오류가 나면 서버가 불안정하다는 메시지 리턴
 		}
 	}
 
@@ -134,7 +134,7 @@ public class SelectSQL {
 				return "NO";						// 거절 메시지 리턴
 			}
 		} catch (SQLException e) {
-			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";
+			return "서버가 불안정합니다. 다음에 다시 이용해주세요!!";	// SQL 오류가 나면 서버가 불안정하다는 메시지 리턴
 		}
 	}
 }

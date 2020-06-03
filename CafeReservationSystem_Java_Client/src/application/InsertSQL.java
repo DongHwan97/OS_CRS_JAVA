@@ -10,9 +10,9 @@ public class InsertSQL {
 
 	Connection con = null;
 	Statement state = null;
-	String url = "jdbc:mysql://localhost:3365/USER?serverTimezone=Asia/Seoul&useSSL=false";
+	String url = "jdbc:mysql://localhost:1111/info?serverTimezone=Asia/Seoul&useSSL=false";
 	String user = "root";
-	String password = "1234";
+	String password = "1111";
 	
 	public InsertSQL() {
 		try {
@@ -25,8 +25,8 @@ public class InsertSQL {
 	// 사용자 DB에 회원가입 하는 사용자 정보 저장
 	public String signUp(String string) {
 		String splitString = string.split(":")[1];
-		String name = splitString.split("/")[0];				// 이름
-		String id = splitString.split("/")[1];					// id
+		String id = splitString.split("/")[0];					// id
+		String name = splitString.split("/")[1];				// 이름
 		String pw = splitString.split("/")[2];					// pw
 		String jumin = splitString.split("/")[3];				// 주민번호
 		
