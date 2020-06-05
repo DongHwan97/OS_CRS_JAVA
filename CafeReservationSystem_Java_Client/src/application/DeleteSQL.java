@@ -10,7 +10,7 @@ public class DeleteSQL {
 	
 	Connection con = null;
 	Statement state = null;
-	String url = "jdbc:mysql://localhost:3365/USER?serverTimezone=Asia/Seoul&useSSL=false";
+	String url = "jdbc:mysql://localhost:1111/USER?serverTimezone=Asia/Seoul&useSSL=false";
 	String user = "root";
 	String password = "1234";
 	

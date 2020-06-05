@@ -35,7 +35,7 @@ public class StartMenuController implements Initializable {
 		else {
 			// 확인 팝업창 띄워주기
 			Alert check = f.popUp(AlertType.CONFIRMATION, 
-					"정말 종료하시겠습니까?", "확인을 누르시면 프로그램을 종료합니다.");
+					"정말 종료하시겠습니까?", "'확인' 버튼을 누르시면 프로그램을 종료합니다.");
 			// 팝업창에서 확인을 눌렀을 시 프로그램 종료
 			if (check.showAndWait().get() == ButtonType.OK) {
 				System.exit(0);

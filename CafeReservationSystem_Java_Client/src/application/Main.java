@@ -10,7 +10,7 @@ import javafx.scene.Parent;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.image.Image;
 
 
 public class Main extends Application {
@@ -31,6 +31,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("다온 Cafe 예약 시스템");
+			primaryStage.getIcons().add(new Image("/favicon.png"));
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();

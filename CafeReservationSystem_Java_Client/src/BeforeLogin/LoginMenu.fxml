@@ -9,9 +9,8 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.LoginMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.LoginMenuController">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,7 +20,7 @@
                      <children>
                         <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../back.PNG" />
+                              <Image url="@../back1.PNG" />
                            </image>
                         </ImageView>
                         <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />

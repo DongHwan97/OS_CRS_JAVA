@@ -1,6 +1,7 @@
 package AfterLogin;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.Function;
@@ -8,7 +9,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,7 +25,7 @@ public class ReservationCancelController implements Initializable {
 	
 	DropShadow teduri1 = new DropShadow();
 	
-	Color teduri = Color.web("#0022ff"); 
+	Color teduri = Color.web("#0022ff");
 	
 	@FXML ImageView back;
 	
@@ -67,6 +70,10 @@ public class ReservationCancelController implements Initializable {
 	}
 	// 예약 취소 버튼을 눌렀을 때
 	public void reservationCancel(ActionEvent e) {
-		
+		Optional<ButtonType> result = f.popUp(AlertType.CONFIRMATION, "예약을 취소하시겠습니까?", "").showAndWait();
+		if (result.get() == ButtonType.OK) {	// 확인 버튼을 눌렀을 경우
+			// DB 딜리트 
+			// DB 딜리트한 값 읽어오기
+		}
 	}
 }

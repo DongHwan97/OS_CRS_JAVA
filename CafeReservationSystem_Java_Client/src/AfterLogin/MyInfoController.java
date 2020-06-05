@@ -46,7 +46,6 @@ public class MyInfoController implements Initializable {
 		teduri1.setColor(teduri);
 		
 		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
-		
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때
