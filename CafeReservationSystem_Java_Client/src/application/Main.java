@@ -31,7 +31,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("다온 Cafe 예약 시스템");
-			primaryStage.getIcons().add(new Image("/favicon.png"));
+			primaryStage.getIcons().add(new Image("/Pictures/favicon.png"));
 			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();

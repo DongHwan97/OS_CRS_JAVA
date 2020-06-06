@@ -2,6 +2,7 @@ package BeforeLogin;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.Function;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
@@ -123,19 +125,31 @@ public class LoginMenuController implements Initializable {
 	}
 
 	public void labelPressed(MouseEvent e) {
+		
+		Optional<ButtonType> result;
+		
 		// ID찾기를 마우스로 눌렀을 때
 		if (e.getSource() == idLabel) {
-			f.changeScene("/BeforeLogin/Find_ID.fxml", idLabel);
+			result = f.popUp(AlertType.CONFIRMATION, "'ID 찾기' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 ID찾기 화면으로 이동합니다.").showAndWait();
+			if (result.get() == ButtonType.OK) {
+				f.changeScene("/BeforeLogin/Find_ID.fxml", idLabel);
+			}
 			idLabel.setEffect(teduri1);
 		}
 		// PW찾기를 마우스로 눌렀을 때
 		else if (e.getSource() == pwLabel) {
-			f.changeScene("/BeforeLogin/Find_PW.fxml", pwLabel);
+			result = f.popUp(AlertType.CONFIRMATION, "'PW 찾기' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 PW찾기 화면으로 이동합니다.").showAndWait();
+			if (result.get() == ButtonType.OK) {
+				f.changeScene("/BeforeLogin/Find_PW.fxml", pwLabel);
+			}
 			idLabel.setEffect(teduri1);
 		}
 		// 회원가입을 마우스로 눌렀을 때
 		else {
-			f.changeScene("/BeforeLogin/SignUp.fxml", signLabel);
+			result = f.popUp(AlertType.CONFIRMATION, "'회원가입' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 회원가입 화면으로 이동합니다.").showAndWait();
+			if (result.get() == ButtonType.OK) {
+				f.changeScene("/BeforeLogin/SignUp.fxml", signLabel);
+			}
 			idLabel.setEffect(teduri1);
 		}
 	}
