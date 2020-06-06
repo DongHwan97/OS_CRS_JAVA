@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,28 +9,27 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MyPageController">
    <cursor>
       <Cursor fx:constant="DEFAULT" />
    </cursor>
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="150.0">
                <children>
-                  <ImageView blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../back.PNG" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
-                     </HBox.margin>
-                  </ImageView>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../back.PNG" />
+                           </image>
+                        </ImageView>
+                        <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                        <Rectangle fx:id="backBorder2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="52.0" layoutY="55.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
+                     </children>
+                  </Pane>
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -38,6 +38,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>
@@ -59,49 +62,58 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefWidth="290.0" text="회원정보 확인">
+                  <Button fx:id="myInfoBtn" mnemonicParsing="false" prefWidth="290.0" text="회원정보 확인">
                      <font>
                         <Font size="24.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefWidth="290.0" text="예약 확인 및 취소">
+                  <Button fx:id="reservationBtn" mnemonicParsing="false" prefWidth="290.0" text="예약 확인 및 취소">
                      <font>
                         <Font size="24.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Button blendMode="SCREEN" mnemonicParsing="false" prefWidth="290.0" text="로그아웃">
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="44.0" prefWidth="290.0" text="로그아웃">
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                      <font>
                         <Font size="24.0" />
                      </font>
-                     <HBox.margin>
-                        <Insets top="20.0" />
-                     </HBox.margin>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField alignment="CENTER" prefHeight="30.0" prefWidth="180.0" text="박정우님">
+                  <TextField alignment="CENTER" editable="false" prefHeight="30.0" prefWidth="180.0" text="박정우님">
                      <font>
                         <Font size="15.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="30.0" />
                      </HBox.margin>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </TextField>
                </children>
             </HBox>

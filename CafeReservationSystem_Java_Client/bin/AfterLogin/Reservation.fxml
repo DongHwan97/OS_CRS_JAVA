@@ -9,25 +9,24 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.ReservationController">
-   <effect>
-      <DropShadow color="#0029ff" />
-   </effect>
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="150.0">
                <children>
-                  <ImageView blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../back.PNG" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
-                     </HBox.margin>
-                  </ImageView>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../back.PNG" />
+                           </image>
+                        </ImageView>
+                        <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                        <Rectangle fx:id="backBorder2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="52.0" layoutY="55.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
+                     </children>
+                  </Pane>
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -36,6 +35,9 @@
                      <font>
                         <Font size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="#0022ff" />
+                     </effect>
                   </Label>
                </children>
             </HBox>
@@ -70,25 +72,31 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <children>
-                        <Button blendMode="SCREEN" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
+                        <Button fx:id="myPageBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
                            <HBox.margin>
                               <Insets right="30.0" top="15.0" />
                            </HBox.margin>
                            <font>
                               <Font size="16.0" />
                            </font>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <TextField alignment="CENTER" prefHeight="32.0" prefWidth="133.0" text="1번째 테이블">
+                        <TextField fx:id="tableInfo" alignment="CENTER" editable="false" prefHeight="32.0" prefWidth="133.0" text="1번째 테이블">
                            <font>
                               <Font size="16.0" />
                            </font>
                            <HBox.margin>
                               <Insets left="30.0" top="15.0" />
                            </HBox.margin>
+                           <effect>
+                              <DropShadow color="#0022ff" />
+                           </effect>
                         </TextField>
                      </children>
                   </HBox>
@@ -144,7 +152,7 @@
             </GridPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="10:00  ~  12:00">
+                  <Button fx:id="firstTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="10:00  ~  12:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -153,7 +161,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="12:00  ~  14:00">
+                  <Button fx:id="secondTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="12:00  ~  14:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -162,7 +170,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="14:00  ~  16:00">
+                  <Button fx:id="ThirdTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="14:00  ~  16:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -171,7 +179,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="16:00  ~  18:00">
+                  <Button fx:id="fourthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="16:00  ~  18:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -180,7 +188,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="18:00  ~  20:00">
+                  <Button fx:id="fifthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="18:00  ~  20:00">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -188,7 +196,7 @@
                </children></HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
                <children>
-                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="20:00  ~  22:00">
+                  <Button fx:id="sixthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="20:00  ~  22:00">
                      <font>
                         <Font size="27.0" />
                      </font>
