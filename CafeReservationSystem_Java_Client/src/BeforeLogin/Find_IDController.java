@@ -25,10 +25,7 @@ public class Find_IDController implements Initializable {
 	
 	Color teduri = Color.web("#0022ff"); 
 	
-	@FXML ImageView back; 
-	
-	@FXML Rectangle backBorder1;
-	@FXML Rectangle backBorder2;
+	@FXML ImageView back;
 
 	@FXML
 	TextField nameField;
@@ -48,18 +45,15 @@ public class Find_IDController implements Initializable {
 		juminField2.setOnAction(event -> enterPressed(event));
 		checkBtn.setOnAction(event -> btnClicked(event));
 		
-		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
-		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		back.setOnMouseEntered(event -> mouseEntered(event));
 		
-		backBorder1.setOnMouseExited(event -> mouseExited(event));
-		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		back.setOnMouseExited(event -> mouseExited(event));
 		
-		backBorder1.setOnMousePressed(event -> mousePressed(event));
-		backBorder2.setOnMousePressed(event -> mousePressed(event));
+		back.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때

@@ -13,6 +13,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -26,24 +27,21 @@ public class LoginMenuController implements Initializable {
 	Function f = new Function();
 	
 	DropShadow teduri1 = new DropShadow();
-	DropShadow teduri2 = new DropShadow();
 	
 	Color teduri = Color.web("#0022ff");
-	Color green = Color.web("#00dd00");
 	
 	@FXML ImageView back;
+	@FXML ImageView pwImage;
+	@FXML ImageView idImage;
 	
 	@FXML Button loginBtn;
 	
 	@FXML TextField idField;
-	@FXML TextField pwField;
+	@FXML PasswordField pwField;
 	
-	@FXML Rectangle backBorder1;
-	@FXML Rectangle backBorder2;
-	
-	@FXML Label idLabel;
-	@FXML Label pwLabel;
-	@FXML Label signLabel;
+	@FXML Label findPW;
+	@FXML Label findID;
+	@FXML Label signUp;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -53,31 +51,31 @@ public class LoginMenuController implements Initializable {
 		idField.setOnAction(event -> enterPressed(event));
 		pwField.setOnAction(event -> enterPressed(event));
 		
-		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
-		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		back.setOnMouseEntered(event -> mouseEntered(event));
 		
-		backBorder1.setOnMouseExited(event -> mouseExited(event));
-		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		back.setOnMouseExited(event -> mouseExited(event));
 		
-		backBorder1.setOnMousePressed(event -> mousePressed(event));
-		backBorder2.setOnMousePressed(event -> mousePressed(event));
+		back.setOnMousePressed(event -> mousePressed(event));
 		
-		idLabel.setOnMouseEntered(event -> labelEntered(event));
-		pwLabel.setOnMouseEntered(event -> labelEntered(event));
-		signLabel.setOnMouseEntered(event -> labelEntered(event));
+		findPW.setOnMouseEntered(event -> labelEntered(event));
+		findID.setOnMouseEntered(event -> labelEntered(event));
+		signUp.setOnMouseEntered(event -> labelEntered(event));
 		
-		idLabel.setOnMouseExited(event -> labelExited(event));
-		pwLabel.setOnMouseExited(event -> labelExited(event));
-		signLabel.setOnMouseExited(event -> labelExited(event));
+		findPW.setOnMouseExited(event -> labelExited(event));
+		findID.setOnMouseExited(event -> labelExited(event));
+		signUp.setOnMouseExited(event -> labelExited(event));
 		
-		idLabel.setOnMousePressed(event -> labelPressed(event));
-		pwLabel.setOnMousePressed(event -> labelPressed(event));
-		signLabel.setOnMousePressed(event -> labelPressed(event));
+		findPW.setOnMousePressed(event -> labelPressed(event));
+		findID.setOnMousePressed(event -> labelPressed(event));
+		signUp.setOnMousePressed(event -> labelPressed(event));
 		
 		teduri1.setColor(teduri);
-		teduri2.setColor(green);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
+		pwImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/6.png")));
+		idImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/11.png")));
+		
+		
 	}
 	// 뒤로가기 이미지에 마우스가 들어왔을 때
 	public void mouseEntered(MouseEvent e) {
@@ -91,36 +89,35 @@ public class LoginMenuController implements Initializable {
 	public void mousePressed(MouseEvent e) {
 		f.changeScene("/BeforeLogin/StartMenu.fxml", idField);
 		back.setEffect(null);
-		backBorder1.setEffect(teduri1);
 	}
 	
 	public void labelEntered(MouseEvent e) {
 		// ID찾기에 마우스를 올렸을 때
-		if (e.getSource() == idLabel) {
-			idLabel.setEffect(teduri2);
+		if (e.getSource() == findID) {
+			findID.setEffect(teduri1);
 		}
 		// PW찾기에 마우스를 올렸을 때
-		else if (e.getSource() == pwLabel) {
-			pwLabel.setEffect(teduri2);
+		else if (e.getSource() == findPW) {
+			findPW.setEffect(teduri1);
 		}
 		// 회원가입에 마우스를 올렸을 때
 		else {
-			signLabel.setEffect(teduri2);
+			signUp.setEffect(teduri1);
 		}
 	}
 	
 	public void labelExited(MouseEvent e) {
 		// ID찾기에서 마우스가 나갔을 때
-		if (e.getSource() == idLabel) {
-			idLabel.setEffect(teduri1);
+		if (e.getSource() == findID) {
+			findID.setEffect(null);
 		}
 		// PW찾기에서 마우스가 나갔을 때
-		else if (e.getSource() == pwLabel) {
-			pwLabel.setEffect(teduri1);
+		else if (e.getSource() == findPW) {
+			findPW.setEffect(null);
 		}
 		// 회원가입에서 마우스가 나갔을 때
 		else {
-			signLabel.setEffect(teduri1);
+			signUp.setEffect(null);
 		}
 	}
 
@@ -129,28 +126,28 @@ public class LoginMenuController implements Initializable {
 		Optional<ButtonType> result;
 		
 		// ID찾기를 마우스로 눌렀을 때
-		if (e.getSource() == idLabel) {
+		if (e.getSource() == findID) {
 			result = f.popUp(AlertType.CONFIRMATION, "'ID 찾기' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 ID찾기 화면으로 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("/BeforeLogin/Find_ID.fxml", idLabel);
+				f.changeScene("/BeforeLogin/Find_ID.fxml", signUp);
 			}
-			idLabel.setEffect(teduri1);
+			findID.setEffect(teduri1);
 		}
 		// PW찾기를 마우스로 눌렀을 때
-		else if (e.getSource() == pwLabel) {
+		else if (e.getSource() == findPW) {
 			result = f.popUp(AlertType.CONFIRMATION, "'PW 찾기' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 PW찾기 화면으로 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("/BeforeLogin/Find_PW.fxml", pwLabel);
+				f.changeScene("/BeforeLogin/Find_PW.fxml", signUp);
 			}
-			idLabel.setEffect(teduri1);
+			findPW.setEffect(teduri1);
 		}
 		// 회원가입을 마우스로 눌렀을 때
 		else {
 			result = f.popUp(AlertType.CONFIRMATION, "'회원가입' 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 회원가입 화면으로 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("/BeforeLogin/SignUp.fxml", signLabel);
+				f.changeScene("/BeforeLogin/SignUp.fxml", signUp);
 			}
-			idLabel.setEffect(teduri1);
+			signUp.setEffect(teduri1);
 		}
 	}
 
