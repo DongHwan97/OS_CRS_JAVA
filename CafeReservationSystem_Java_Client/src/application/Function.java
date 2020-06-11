@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.control.Control;
 import javafx.stage.Stage;
 
@@ -68,7 +69,7 @@ public class Function {
 		a.setTitle("다온 Cafe 예약 시스템");		// 팝업창의 타이틀 설정
 		a.setHeaderText(headerText);		// 파라미터 삽입 (메인 text)
 		a.setContentText(contentText);		// 파라미터 삽입 (작은 설명 글)
-		
+				
 		return a;
 	}
 }

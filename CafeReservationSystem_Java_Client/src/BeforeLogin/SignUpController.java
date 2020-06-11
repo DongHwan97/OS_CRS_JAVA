@@ -25,12 +25,13 @@ public class SignUpController implements Initializable {
 	
 	Color teduri = Color.web("#0022ff"); 
 	
-	@FXML ImageView back; 
+	@FXML ImageView back;
+	@FXML ImageView nameImage;
+	@FXML ImageView idImage;
+	@FXML ImageView pwImage;
+	@FXML ImageView birthImage;
 	
-	@FXML Rectangle backBorder1;
-	@FXML Rectangle backBorder2;
-	
-	@FXML Button overlapCheckBtn;
+	@FXML Button overlapBtn;
 	@FXML Button checkBtn;
 	
 	@FXML TextField idField;
@@ -43,7 +44,7 @@ public class SignUpController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		overlapCheckBtn.setOnAction(event -> btnClicked(event));
+		overlapBtn.setOnAction(event -> btnClicked(event));
 		checkBtn.setOnAction(event -> btnClicked(event));
 		
 		idField.setOnAction(event -> enterPressed(event));
@@ -53,18 +54,19 @@ public class SignUpController implements Initializable {
 		juminField1.setOnAction(event -> enterPressed(event));
 		juminField2.setOnAction(event -> enterPressed(event));
 		
-		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
-		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		back.setOnMouseEntered(event -> mouseEntered(event));
 		
-		backBorder1.setOnMouseExited(event -> mouseExited(event));
-		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		back.setOnMouseExited(event -> mouseExited(event));
 		
-		backBorder1.setOnMousePressed(event -> mousePressed(event));
-		backBorder2.setOnMousePressed(event -> mousePressed(event));
+		back.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
+		nameImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/16.png")));
+		idImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/11.png")));
+		pwImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/6.png")));
+		birthImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/17.png")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때
@@ -92,8 +94,13 @@ public class SignUpController implements Initializable {
 		String jumin2 = juminField2.getText();
 		
 		// 중복확인 버튼을 눌렸을 경우
-		if (e.getSource() == overlapCheckBtn) {
-			// 중복확인
+		if (e.getSource() == overlapBtn) {	// 이름이 빈칸일 경우
+			if (name.equals("")) {
+				f.popUp(AlertType.WARNING, "이름은 공백일 수 없습니다.", "이름을 입력해주세요.");
+			}
+			else {
+				
+			}
 		}
 		// 확인 버튼을 눌렀을 경우
 		else {

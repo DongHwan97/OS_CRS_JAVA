@@ -23,12 +23,12 @@ public class Find_PWController implements Initializable {
 	
 	DropShadow teduri1 = new DropShadow();
 	
-	Color teduri = Color.web("#0022ff"); 
+	Color teduri = Color.web("#0022ff");
 	
-	@FXML ImageView back; 
-	
-	@FXML Rectangle backBorder1;
-	@FXML Rectangle backBorder2;
+	@FXML ImageView back;
+	@FXML ImageView nameImage;
+	@FXML ImageView idImage;
+	@FXML ImageView birthImage;
 
 	@FXML Button checkBtn;
 
@@ -46,18 +46,18 @@ public class Find_PWController implements Initializable {
 		juminField1.setOnAction(event -> enterPressed(event));
 		juminField2.setOnAction(event -> enterPressed(event));
 		
-		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
-		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		back.setOnMouseEntered(event -> mouseEntered(event));
 		
-		backBorder1.setOnMouseExited(event -> mouseExited(event));
-		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		back.setOnMouseExited(event -> mouseExited(event));
 		
-		backBorder1.setOnMousePressed(event -> mousePressed(event));
-		backBorder2.setOnMousePressed(event -> mousePressed(event));
+		back.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
+		nameImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/16.png")));
+		idImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/11.png")));
+		birthImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/17.png")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때

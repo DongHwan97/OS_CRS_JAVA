@@ -9,320 +9,98 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.SignUpController">
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER" prefHeight="112.0" prefWidth="500.0">
-               <children>
-                  <Label blendMode="SRC_ATOP" text="회원가입">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets top="40.0" />
-                     </HBox.margin>
-                  </Label>
-               </children>
-            </HBox>
-            <GridPane GridPane.rowIndex="1">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                     <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="nameField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0" promptText="Name">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets right="30.0" />
-                                 </HBox.margin>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="idField" alignment="CENTER" prefHeight="33.0" prefWidth="190.0" promptText="ID">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </HBox.margin>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </TextField>
-                              <HBox alignment="CENTER" prefHeight="69.0" prefWidth="130.0">
-                                 <children>
-                                    <Button fx:id="overlapCheckBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="중복확인">
-                                       <HBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow color="#0029ff" />
-                                       </effect>
-                                    </Button>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label text="이름">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label text="아이디">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="10.0" />
-                                 </HBox.margin>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="181.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="319.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
-               <children>
-                  <GridPane>
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <Label text="주민등록번호">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <effect>
-                                          <DropShadow color="#0029ff" />
-                                       </effect>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                           <children>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
-                                 <children>
-                                    <TextField fx:id="juminField1" alignment="CENTER" prefHeight="26.0" prefWidth="80.0" promptText="앞 6자리">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <effect>
-                                          <DropShadow color="#0029ff" />
-                                       </effect>
-                                    </TextField>
-                                    <Label prefHeight="24.0" prefWidth="35.0" text="-">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets left="13.0" />
-                                       </padding>
-                                    </Label>
-                                    <TextField fx:id="juminField2" alignment="CENTER" prefHeight="26.0" prefWidth="80.0" promptText="뒤 7자리">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                       <effect>
-                                          <DropShadow color="#0029ff" />
-                                       </effect>
-                                    </TextField>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="300.0" />
-                           </children>
-                        </VBox>
-                     </children>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="181.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="319.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="checkBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="확인">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                           <effect>
-                              <DropShadow color="#0029ff" />
-                           </effect>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <GridPane GridPane.rowIndex="2">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="181.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="326.0" minWidth="10.0" prefWidth="319.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label text="패스워드">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" />
-                                 </HBox.margin>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label text="패스워드 확인">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                     <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="pwField1" alignment="CENTER" prefHeight="33.0" prefWidth="190.0" promptText="PW">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" />
-                                 </HBox.margin>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <TextField fx:id="pwField2" alignment="CENTER" prefHeight="33.0" prefWidth="190.0" promptText="PW 재입력">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <effect>
-                                    <DropShadow color="#0029ff" />
-                                 </effect>
-                              </TextField>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-         </children>
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
-   </center>
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="150.0">
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../back.PNG" />
-                           </image>
-                        </ImageView>
-                        <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                        <Rectangle fx:id="backBorder2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="52.0" layoutY="55.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
-                     </children>
-                  </Pane>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="다온 Cafe">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0029ff" />
-                     </effect>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-   </top>
-</BorderPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.Find_IDController">
+   <children>
+      <Label alignment="CENTER" layoutX="148.0" layoutY="80.0" text="다온 Cafe">
+         <font>
+            <Font name="Calibri" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="back" fitHeight="51.0" fitWidth="54.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/backBtn.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nameField" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="190.0" prefWidth="214.0" promptText="Please Enter Name">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="idField" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="268.0" prefWidth="214.0" promptText="Please Enter UserID">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="overlapBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="376.0" layoutY="268.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Overlap">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="pwField1" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="351.0" prefWidth="214.0" promptText="Please Enter Password">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="pwField2" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="398.0" prefWidth="214.0" promptText="Please Enter Conf Password">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="juminField1" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="476.0" prefHeight="30.0" prefWidth="100.0" promptText="6자리">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="juminField2" alignment="CENTER" blendMode="MULTIPLY" layoutX="257.0" layoutY="476.0" prefHeight="30.0" prefWidth="100.0" promptText="7자리">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </PasswordField>
+      <Label layoutX="247.0" layoutY="486.0" text="-" />
+      <Label layoutX="204.0" layoutY="234.0" text="Username">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="440.0" text="Birth">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="162.0" layoutY="316.0" text="Password / Confirm">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="156.0" text="Your name">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkBtn" alignment="CENTER" blendMode="LIGHTEN" layoutX="175.0" layoutY="568.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Check">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="pwImage" fitHeight="36.0" fitWidth="66.0" layoutX="100.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="idImage" fitHeight="36.0" fitWidth="66.0" layoutX="100.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/11.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nameImage" fitHeight="36.0" fitWidth="66.0" layoutX="100.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="birthImage" fitHeight="36.0" fitWidth="66.0" layoutX="100.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/17.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

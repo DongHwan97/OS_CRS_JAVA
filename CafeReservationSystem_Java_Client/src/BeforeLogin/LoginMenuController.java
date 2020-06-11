@@ -131,7 +131,7 @@ public class LoginMenuController implements Initializable {
 			if (result.get() == ButtonType.OK) {
 				f.changeScene("/BeforeLogin/Find_ID.fxml", signUp);
 			}
-			findID.setEffect(teduri1);
+			findID.setEffect(null);
 		}
 		// PW찾기를 마우스로 눌렀을 때
 		else if (e.getSource() == findPW) {
@@ -139,7 +139,7 @@ public class LoginMenuController implements Initializable {
 			if (result.get() == ButtonType.OK) {
 				f.changeScene("/BeforeLogin/Find_PW.fxml", signUp);
 			}
-			findPW.setEffect(teduri1);
+			findPW.setEffect(null);
 		}
 		// 회원가입을 마우스로 눌렀을 때
 		else {
@@ -147,7 +147,7 @@ public class LoginMenuController implements Initializable {
 			if (result.get() == ButtonType.OK) {
 				f.changeScene("/BeforeLogin/SignUp.fxml", signUp);
 			}
-			signUp.setEffect(teduri1);
+			signUp.setEffect(null);
 		}
 	}
 

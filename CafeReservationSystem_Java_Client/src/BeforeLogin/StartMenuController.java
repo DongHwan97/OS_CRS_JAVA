@@ -9,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -16,20 +18,26 @@ public class StartMenuController implements Initializable {
 
 	Function f = new Function();
 	
-	@FXML Button loginBtn;
+	@FXML ImageView startImage;
+	@FXML ImageView exitImage;
+	
+	@FXML Button startBtn;
 	@FXML Button exitBtn;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		loginBtn.setOnAction(event -> btnClicked(event));
+		startBtn.setOnAction(event -> btnClicked(event));
 		exitBtn.setOnAction(event -> btnClicked(event));
+		
+		startImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/15.png")));
+		exitImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/12.png")));
 	}
 	
 	public void btnClicked(ActionEvent e) {
 		// 로그인 화면으로 버튼을 눌렀을 때
-		if (e.getSource() == loginBtn) {
-			f.changeScene("/BeforeLogin/LoginMenu.fxml", loginBtn);
+		if (e.getSource() == startBtn) {
+			f.changeScene("/BeforeLogin/LoginMenu.fxml", startBtn);
 		}
 		// 종료 버튼을 눌렀을 때
 		else {
