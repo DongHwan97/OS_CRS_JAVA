@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 
 
@@ -19,13 +20,14 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		/*
+		
 		try {
-			socket = new Socket("192.168.219.128", 7875);
+			socket = new Socket("192.168.0.28", 7908);
 		} catch (IOException e) {
-			System.out.println("Server is not opened");
+			System.out.println("서버 연결 안됨");
+			System.exit(0);
 		}
-		*/
+		
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/BeforeLogin/StartMenu.fxml"));
 			Scene scene = new Scene(root);

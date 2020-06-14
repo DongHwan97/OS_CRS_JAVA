@@ -11,6 +11,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert.AlertType;
 
 public class MainMenuController implements Initializable {
@@ -23,7 +25,11 @@ public class MainMenuController implements Initializable {
 	@FXML Button homepageBtn;
 	@FXML Button reservationBtn;
 	
-	@FXML TextField idField;
+	@FXML ImageView reservImage;
+	@FXML ImageView menuImage;
+	@FXML ImageView mypageImage;
+	@FXML ImageView homeImage;
+	@FXML ImageView logoutImage;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -33,6 +39,12 @@ public class MainMenuController implements Initializable {
 		mypageBtn.setOnAction(event -> btnClicked(event));
 		homepageBtn.setOnAction(event -> btnClicked(event));
 		reservationBtn.setOnAction(event -> btnClicked(event));
+		
+		reservImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/26.png")));
+		menuImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/25.png")));
+		mypageImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/18.png")));
+		homeImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/19.png")));
+		logoutImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/24.png")));
 	}
 	
 	public void btnClicked(ActionEvent e) {

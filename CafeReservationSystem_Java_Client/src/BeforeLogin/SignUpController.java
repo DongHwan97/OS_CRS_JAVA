@@ -1,5 +1,6 @@
 package BeforeLogin;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -8,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -39,7 +41,7 @@ public class SignUpController implements Initializable {
 	@FXML TextField pwField1;
 	@FXML TextField pwField2;
 	@FXML TextField juminField1;
-	@FXML TextField juminField2;
+	@FXML PasswordField juminField2;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -98,8 +100,19 @@ public class SignUpController implements Initializable {
 			if (name.equals("")) {
 				f.popUp(AlertType.WARNING, "이름은 공백일 수 없습니다.", "이름을 입력해주세요.");
 			}
-			else {
-				
+			else {							// 빈칸이 아닐 경우
+				// 서버로 중복확인용 문자열 보내기 ("메시지 타입_id")
+				try {
+					f.wrtieServer("CI_" + id);
+					if (f.readServer().equals("false")) {
+						f.popUp(AlertType.INFORMATION, "사용 가능한 아이디입니다!!!", "").show();
+						idField.setEditable(false);
+					} else {
+						f.popUp(AlertType.INFORMATION, "아이디 중복!!!", "다른 아이디를 사용해주세요").show();
+					}
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		}
 		// 확인 버튼을 눌렀을 경우
@@ -123,10 +136,22 @@ public class SignUpController implements Initializable {
 			// 패스워드와 패스워드 확인의 값이 다를 때
 			else if (!pw1.equals(pw2)) {
 				f.popUp(AlertType.WARNING, "패스워드가 다릅니다.", "패스워드를 정확히 입력해주세요.");
+				pwField1.setText("");
+				pwField2.setText("");
 			}
 			// 정보를 모두 입력했을 경우
 			else {
-				f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
+				// 서버로 회원가입용 문자열 보내기 ("메시지 타입_이름_아이디_패스워드_주민등록번호")
+				
+				try {
+					f.wrtieServer("MJ_" + name + "_" + id + "_" + pw1 + "_" + jumin1 + jumin2);
+					f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+					f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
+				
+				//f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
 			}
 		}
 	}
@@ -161,10 +186,22 @@ public class SignUpController implements Initializable {
 		// 패스워드와 패스워드 확인의 값이 다를 때
 		else if (!pw1.equals(pw2)) {
 			f.popUp(AlertType.WARNING, "패스워드가 다릅니다.", "패스워드를 정확히 입력해주세요.");
+			pwField1.setText("");
+			pwField2.setText("");
 		}
 		// 정보를 모두 입력했을 경우
 		else {
-			f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
+			// 서버로 회원가입용 문자열 보내기 ("메시지 타입_이름_아이디_패스워드_주민등록번호")
+			
+			try {
+				f.wrtieServer("MJ_" + name + "_" + id + "_" + pw1 + "_" + jumin1 + jumin2);
+				f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+				f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
+			} catch(IOException ex) {
+				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+			}
+			
+			//f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
 		}
 	}
 }

@@ -16,25 +16,25 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="129.0" layoutY="232.0" stroke="BLACK" strokeType="INSIDE" width="240.0" />
+      <ImageView fx:id="startImage" fitHeight="41.0" fitWidth="54.0" layoutX="136.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/15.png" />
+         </image></ImageView>
       <Button fx:id="startBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="129.0" layoutY="232.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Log in">
          <font>
             <Font name="Calibri" size="33.0" />
          </font>
       </Button>
-      <ImageView fx:id="startImage" fitHeight="41.0" fitWidth="54.0" layoutX="136.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Pictures/15.png" />
-         </image></ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="130.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" width="240.0" />
-      <Button fx:id="exitBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="130.0" layoutY="382.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Exit">
-         <font>
-            <Font name="Calibri" size="33.0" />
-         </font>
-      </Button>
       <ImageView fx:id="exitImage" fitHeight="41.0" fitWidth="54.0" layoutX="142.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures/12.png" />
          </image>
       </ImageView>
+      <Button fx:id="exitBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="130.0" layoutY="382.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Exit">
+         <font>
+            <Font name="Calibri" size="33.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

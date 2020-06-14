@@ -165,15 +165,20 @@ public class LoginMenuController implements Initializable {
 		}
 		// TextField에 ID, PW를 입력하였을 경우
 		else {
-			f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
-			//DB에 질의
-			/*
-			 * if ((f.sdb.login("S:" + id + "/" + pw).equals("exist"))) {
-			 * f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
-			 * JOptionPane.showMessageDialog(null, "게임방으로 입장합니다", "Message",
-			 * JOptionPane.INFORMATION_MESSAGE); try { data.writeUTF("S: + _id + / pw"); }
-			 * catch (IOException e1) { e1.printStackTrace(); } }
-			 */
+			// 서버로 로그인용 문자열 전송 ("메시지타입_아이디_패스워드")
+			
+			try {
+				f.wrtieServer("LI_" + id + "_" + pw);
+				if(f.readServer().equals("success")) {	// 서버로부터 읽어들인 문자열이 OK일 경우
+					f.popUp(AlertType.INFORMATION, "로그인 성공!!!", "메인 메뉴로 이동합니다.").showAndWait();
+					f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
+					Function.id = id;
+				}
+			} catch(IOException ex) {
+				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+			}
+			
+			//f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
 		}
 	}
 
@@ -191,15 +196,20 @@ public class LoginMenuController implements Initializable {
 		}
 		// TextField에 ID, PW를 입력하였을 경우
 		else {
-			f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
-			//DB에 질의
-			/*
-			 * if ((f.sdb.login("S:" + id + "/" + pw).equals("exist"))) {
-			 * f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
-			 * JOptionPane.showMessageDialog(null, "게임방으로 입장합니다", "Message",
-			 * JOptionPane.INFORMATION_MESSAGE); try { data.writeUTF("S: + _id + / pw"); }
-			 * catch (IOException e1) { e1.printStackTrace(); } }
-			 */
+			// 서버로 로그인용 문자열 전송 ("메시지타입_아이디_패스워드")
+			
+			try {
+				f.wrtieServer("LI_" + id + "_" + pw);
+				if(f.readServer().equals("success")) {	// 서버로부터 읽어들인 문자열이 OK일 경우
+					f.popUp(AlertType.INFORMATION, "로그인 성공!!!", "메인 메뉴로 이동합니다.").showAndWait();
+					f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
+					Function.id = id;
+				}
+			} catch(IOException ex) {
+				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+			}
+			
+			//f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
 		}
 	}
 }

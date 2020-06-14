@@ -9,34 +9,69 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.StartMenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MainMenuController">
    <children>
-      <Label alignment="CENTER" layoutX="148.0" layoutY="80.0" text="다온 Cafe">
+      <Label alignment="CENTER" layoutX="149.0" layoutY="80.0" text="다온 Cafe">
          <font>
             <Font name="Calibri" size="50.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="129.0" layoutY="232.0" stroke="BLACK" strokeType="INSIDE" width="240.0" />
-      <Button fx:id="startBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="129.0" layoutY="232.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Log in">
-         <font>
-            <Font name="Calibri" size="33.0" />
-         </font>
-      </Button>
-      <ImageView fx:id="startImage" fitHeight="41.0" fitWidth="54.0" layoutX="136.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="reservImage" fitHeight="41.0" fitWidth="54.0" layoutX="107.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Pictures/15.png" />
+            <Image url="@../Pictures/26.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="130.0" layoutY="382.0" stroke="BLACK" strokeType="INSIDE" width="240.0" />
-      <Button fx:id="exitBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="130.0" layoutY="382.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="240.0" text="Exit">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="100.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="reservationBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="100.0" layoutY="167.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Reservation">
          <font>
-            <Font name="Calibri" size="33.0" />
+            <Font name="Calibri" size="30.0" />
          </font>
       </Button>
-      <ImageView fx:id="exitImage" fitHeight="41.0" fitWidth="54.0" layoutX="142.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="menuImage" fitHeight="50.0" fitWidth="50.0" layoutX="103.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Pictures/12.png" />
+            <Image url="@../Pictures/25.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="menuBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="255.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Menu">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="homeImage" fitHeight="41.0" fitWidth="54.0" layoutX="106.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/19.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="343.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="homepageBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="343.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Home Page">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="logoutImage" fitHeight="41.0" fitWidth="54.0" layoutX="112.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/24.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="432.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="logoutBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="432.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Log out">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="50.0" layoutX="413.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Button fx:id="mypageBtn" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="My page">
+         <font>
+            <Font name="Calibri" size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="mypageImage" fitHeight="30.0" fitWidth="50.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/18.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

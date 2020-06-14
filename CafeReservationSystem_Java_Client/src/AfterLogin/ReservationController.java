@@ -1,5 +1,6 @@
 package AfterLogin;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -80,31 +81,67 @@ public class ReservationController implements Initializable {
 			result = f.popUp(AlertType.CONFIRMATION, "'10시 ~ 12시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 1012);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		} else if (e.getSource() == secondTime) {
 			result = f.popUp(AlertType.CONFIRMATION, "'12시 ~ 14시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 1214);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		} else if (e.getSource() == thirdTime) {
 			result = f.popUp(AlertType.CONFIRMATION, "'14시 ~ 16시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 1416);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		} else if (e.getSource() == fourthTime) {
 			result = f.popUp(AlertType.CONFIRMATION, "'16시 ~ 18시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 1618);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		} else if (e.getSource() == fifthTime) {
 			result = f.popUp(AlertType.CONFIRMATION, "'18시 ~ 20시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 1820);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		} else {
 			result = f.popUp(AlertType.CONFIRMATION, "'20시 ~ 22시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// DB에 정보 저장
+				try {
+					f.wrtieServer("타입_" + Function.id + "_" + Function.table + "_" + 2022);
+					f.popUp(AlertType.INFORMATION, "예약이 완료되었습니다!!!", "예약 정보는 마이페이지에서 확인 가능합니다.").show();
+				} catch(IOException ex) {
+					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				}
 			}
 		}
 	}
