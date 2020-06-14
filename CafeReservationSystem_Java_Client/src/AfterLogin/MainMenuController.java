@@ -77,7 +77,7 @@ public class MainMenuController implements Initializable {
 			result = f.popUp(AlertType.CONFIRMATION, "홈페이지로 이동하시겠습니까?", "'확인' 버튼을 누를 시 홈페이지로 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// 홈페이지로 이동 하는 코드!!
-				new homePage();
+				new homePage();//이동
 			}
 		}
 		// 자리 확인 및 예약 버튼을 눌렀을 때
