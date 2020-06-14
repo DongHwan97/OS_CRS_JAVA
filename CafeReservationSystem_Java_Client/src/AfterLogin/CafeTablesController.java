@@ -6,7 +6,9 @@ import java.util.ResourceBundle;
 import application.Function;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,53 +22,168 @@ public class CafeTablesController implements Initializable {
 	
 	DropShadow teduri1 = new DropShadow();
 	
-	Color teduri = Color.web("#0022ff"); 
+	Color teduri = Color.web("#0022ff");
+	
+	@FXML Label label;
 	
 	@FXML ImageView back;
 	
-	@FXML Rectangle backBorder1;
-	@FXML Rectangle backBorder2;
+	@FXML ImageView tableNo_1;
+	@FXML ImageView tableNo_2;
+	@FXML ImageView tableNo_3;
+	@FXML ImageView tableNo_4;
+	@FXML ImageView tableNo_5;
+	@FXML ImageView tableNo_6;
+	@FXML ImageView tableNo_7;
+	@FXML ImageView tableNo_8;
+	@FXML ImageView tableNo_9;
+	@FXML ImageView tableNo_10;
 	
-	@FXML Button single_1;
-	@FXML Button single_2;
-	@FXML Button single_3;
-	@FXML Button single_4;
-	@FXML Button single_5;
-	@FXML Button double_1;
-	@FXML Button double_2;
-	@FXML Button double_3;
-	@FXML Button quadruple_1;
-	@FXML Button quadruple_2;
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		backBorder1.setOnMouseEntered(event -> mouseEntered(event));
-		backBorder2.setOnMouseEntered(event -> mouseEntered(event));
+		back.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_1.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_2.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_3.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_4.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_5.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_6.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_7.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_8.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_9.setOnMouseEntered(event -> mouseEntered(event));
+		tableNo_10.setOnMouseEntered(event -> mouseEntered(event));
 		
-		backBorder1.setOnMouseExited(event -> mouseExited(event));
-		backBorder2.setOnMouseExited(event -> mouseExited(event));
+		back.setOnMouseExited(event -> mouseExited(event));
+		tableNo_1.setOnMouseExited(event -> mouseExited(event));
+		tableNo_2.setOnMouseExited(event -> mouseExited(event));
+		tableNo_3.setOnMouseExited(event -> mouseExited(event));
+		tableNo_4.setOnMouseExited(event -> mouseExited(event));
+		tableNo_5.setOnMouseExited(event -> mouseExited(event));
+		tableNo_6.setOnMouseExited(event -> mouseExited(event));
+		tableNo_7.setOnMouseExited(event -> mouseExited(event));
+		tableNo_8.setOnMouseExited(event -> mouseExited(event));
+		tableNo_9.setOnMouseExited(event -> mouseExited(event));
+		tableNo_10.setOnMouseExited(event -> mouseExited(event));
 		
-		backBorder1.setOnMousePressed(event -> mousePressed(event));
-		backBorder2.setOnMousePressed(event -> mousePressed(event));
+		back.setOnMousePressed(event -> mousePressed(event));
+		tableNo_1.setOnMousePressed(event -> mousePressed(event));
+		tableNo_2.setOnMousePressed(event -> mousePressed(event));
+		tableNo_3.setOnMousePressed(event -> mousePressed(event));
+		tableNo_4.setOnMousePressed(event -> mousePressed(event));
+		tableNo_5.setOnMousePressed(event -> mousePressed(event));
+		tableNo_6.setOnMousePressed(event -> mousePressed(event));
+		tableNo_7.setOnMousePressed(event -> mousePressed(event));
+		tableNo_8.setOnMousePressed(event -> mousePressed(event));
+		tableNo_9.setOnMousePressed(event -> mousePressed(event));
+		tableNo_10.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../back.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
+		tableNo_1.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_2.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_3.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_4.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_5.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_6.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_7.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_8.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_9.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
+		tableNo_10.setImage(new Image(getClass().getResourceAsStream("../Pictures/29.png")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때
 	public void mouseEntered(MouseEvent e) {
-		back.setEffect(teduri1);
+		if (e.getSource() == back) {
+			back.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_1) {
+			tableNo_1.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_2) {
+			tableNo_2.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_3) {
+			tableNo_3.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_4) {
+			tableNo_4.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_5) {
+			tableNo_5.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_6) {
+			tableNo_6.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_7) {
+			tableNo_7.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_8) {
+			tableNo_8.setEffect(teduri1);
+		} else if (e.getSource() == tableNo_9) {
+			tableNo_9.setEffect(teduri1);
+		} else {
+			tableNo_10.setEffect(teduri1);
+		}
 	}
 	// 뒤로가기 이미지에서 마우스가 나갔을 때
 	public void mouseExited(MouseEvent e) {
-		back.setEffect(null);
+		if (e.getSource() == back) {
+			back.setEffect(null);
+		} else if (e.getSource() == tableNo_1) {
+			tableNo_1.setEffect(null);
+		} else if (e.getSource() == tableNo_2) {
+			tableNo_2.setEffect(null);
+		} else if (e.getSource() == tableNo_3) {
+			tableNo_3.setEffect(null);
+		} else if (e.getSource() == tableNo_4) {
+			tableNo_4.setEffect(null);
+		} else if (e.getSource() == tableNo_5) {
+			tableNo_5.setEffect(null);
+		} else if (e.getSource() == tableNo_6) {
+			tableNo_6.setEffect(null);
+		} else if (e.getSource() == tableNo_7) {
+			tableNo_7.setEffect(null);
+		} else if (e.getSource() == tableNo_8) {
+			tableNo_8.setEffect(null);
+		} else if (e.getSource() == tableNo_9) {
+			tableNo_9.setEffect(null);
+		} else {
+			tableNo_10.setEffect(null);
+		}
 	}
 	// 뒤로가기 이미지를 클릭했을 때
 	public void mousePressed(MouseEvent e) {
-		f.changeScene("/AfterLogin/MainMenu.fxml", single_1);
-		back.setEffect(null);
+		if (e.getSource() == back) {
+			f.changeScene("/AfterLogin/MainMenu.fxml", label);
+			back.setEffect(null);
+			return;
+		} else if (e.getSource() == tableNo_1) {
+			Function.table = 1;
+			tableNo_1.setEffect(null);
+		} else if (e.getSource() == tableNo_2) {
+			Function.table = 2;
+			tableNo_2.setEffect(null);
+		} else if (e.getSource() == tableNo_3) {
+			Function.table = 3;
+			tableNo_3.setEffect(null);
+		} else if (e.getSource() == tableNo_4) {
+			Function.table = 4;
+			tableNo_4.setEffect(null);
+		} else if (e.getSource() == tableNo_5) {
+			Function.table = 5;
+			tableNo_5.setEffect(null);
+		} else if (e.getSource() == tableNo_6) {
+			Function.table = 6;
+			tableNo_6.setEffect(null);
+		} else if (e.getSource() == tableNo_7) {
+			Function.table = 7;
+			tableNo_7.setEffect(null);
+		} else if (e.getSource() == tableNo_8) {
+			Function.table = 8;
+			tableNo_8.setEffect(null);
+		} else if (e.getSource() == tableNo_9) {
+			Function.table = 9;
+			tableNo_9.setEffect(null);
+		} else {
+			Function.table = 10;
+			tableNo_10.setEffect(null);
+		}
+		f.changeScene("/AfterLogin/Reservation.fxml", label);
 	}
 }
