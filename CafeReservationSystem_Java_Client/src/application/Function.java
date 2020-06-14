@@ -49,10 +49,8 @@ public class Function {
 	
 	public String readServer() throws IOException {
 		String msg = null;
-		System.out.println("2");
 		try {
 			msg = dataInStream.readUTF();
-			System.out.println("1");
 		} catch(SocketException e) {
 			popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 		}

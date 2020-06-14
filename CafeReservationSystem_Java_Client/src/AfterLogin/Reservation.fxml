@@ -10,199 +10,77 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.ReservationController">
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="150.0">
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../back.PNG" />
-                           </image>
-                        </ImageView>
-                        <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                        <Rectangle fx:id="backBorder2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="52.0" layoutY="55.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
-                     </children>
-                  </Pane>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="다온 Cafe">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-   </top>
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button fx:id="myPageBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="마이 페이지">
-                           <HBox.margin>
-                              <Insets right="30.0" top="15.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                           <effect>
-                              <DropShadow color="#0022ff" />
-                           </effect>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <TextField fx:id="tableInfo" alignment="CENTER" editable="false" prefHeight="32.0" prefWidth="133.0" text="1번째 테이블">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="30.0" top="15.0" />
-                           </HBox.margin>
-                           <effect>
-                              <DropShadow color="#0022ff" />
-                           </effect>
-                        </TextField>
-                     </children>
-                  </HBox>
-               </children>
-            </GridPane>
-            <GridPane GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" fill="#e4e4e4" height="20.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
-                              <Label text="예약 가능">
-                                 <HBox.margin>
-                                    <Insets left="20.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="SRC_ATOP" disable="true" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" width="20.0">
-                                 <HBox.margin>
-                                    <Insets left="15.0" />
-                                 </HBox.margin>
-                              </Rectangle>
-                              <Label text="예약 불가능">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="20.0" />
-                                 </HBox.margin>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-               <children>
-                  <Button fx:id="firstTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="10:00  ~  12:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
-               <children>
-                  <Button fx:id="secondTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="12:00  ~  14:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
-               <children>
-                  <Button fx:id="ThirdTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="14:00  ~  16:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
-               <children>
-                  <Button fx:id="fourthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="16:00  ~  18:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
-               <children>
-                  <Button fx:id="fifthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="18:00  ~  20:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children></HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
-               <children>
-                  <Button fx:id="sixthTime" blendMode="SRC_ATOP" mnemonicParsing="false" prefHeight="50.0" prefWidth="360.0" text="20:00  ~  22:00">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Button>
-               </children></HBox>
-         </children>
-      </GridPane>
-   </center>
-</BorderPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.ReservationController">
+   <children>
+      <ImageView fx:id="back" fitHeight="51.0" fitWidth="54.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/backBtn.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="148.0" layoutY="80.0" text="다온 Cafe">
+         <font>
+            <Font name="Calibri" size="50.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="26.0" layoutX="95.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6c0b9" height="26.0" layoutX="95.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Button fx:id="mypageBtn" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="My page">
+         <font>
+            <Font name="Calibri" size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="mypageImage" fitHeight="30.0" fitWidth="50.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/18.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="133.0" layoutY="165.0" prefHeight="26.0" prefWidth="106.0" text="예약 가능">
+         <font>
+            <Font name="Segoe Print" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="204.0" prefHeight="26.0" prefWidth="100.0" text="예약 불가능">
+         <font>
+            <Font name="Segoe Print" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="266.0" prefHeight="15.0" prefWidth="202.0" text="10:00 ~ 12:00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="424.0" prefHeight="15.0" prefWidth="202.0" text="18:00 ~ 20:00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="385.0" prefHeight="15.0" prefWidth="202.0" text="16:00 ~ 18:00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="346.0" prefHeight="15.0" prefWidth="202.0" text="14:00 ~ 16:00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="307.0" prefHeight="15.0" prefWidth="202.0" text="12:00 ~ 14:00" textFill="#000000d9">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="466.0" prefHeight="15.0" prefWidth="202.0" text="20:00 ~ 24:00">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="firstTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="sixthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="466.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="secondTime" arcHeight="5.0" arcWidth="5.0" fill="#d1ccb200" height="32.0" layoutX="89.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="thirdTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="fourthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="fifthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+   </children>
+</Pane>
