@@ -154,34 +154,34 @@ public class CafeTablesController implements Initializable {
 			back.setEffect(null);
 			return;
 		} else if (e.getSource() == tableNo_1) {
-			Function.table = 1;
+			Function.table = "1";
 			tableNo_1.setEffect(null);
 		} else if (e.getSource() == tableNo_2) {
-			Function.table = 2;
+			Function.table = "2";
 			tableNo_2.setEffect(null);
 		} else if (e.getSource() == tableNo_3) {
-			Function.table = 3;
+			Function.table = "3";
 			tableNo_3.setEffect(null);
 		} else if (e.getSource() == tableNo_4) {
-			Function.table = 4;
+			Function.table = "4";
 			tableNo_4.setEffect(null);
 		} else if (e.getSource() == tableNo_5) {
-			Function.table = 5;
+			Function.table = "5";
 			tableNo_5.setEffect(null);
 		} else if (e.getSource() == tableNo_6) {
-			Function.table = 6;
+			Function.table = "6";
 			tableNo_6.setEffect(null);
 		} else if (e.getSource() == tableNo_7) {
-			Function.table = 7;
+			Function.table = "7";
 			tableNo_7.setEffect(null);
 		} else if (e.getSource() == tableNo_8) {
-			Function.table = 8;
+			Function.table = "8";
 			tableNo_8.setEffect(null);
 		} else if (e.getSource() == tableNo_9) {
-			Function.table = 9;
+			Function.table = "9";
 			tableNo_9.setEffect(null);
 		} else {
-			Function.table = 10;
+			Function.table = "10";
 			tableNo_10.setEffect(null);
 		}
 		f.changeScene("/AfterLogin/Reservation.fxml", label);

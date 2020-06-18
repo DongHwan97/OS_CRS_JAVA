@@ -27,14 +27,14 @@ import javafx.stage.StageStyle;
 
 //기능 클래스
 public class Function {
-	Socket socket = Main.socket;
+	Socket socket = Main.socket;  
 	OutputStream outStream;
 	InputStream inStream;
 	DataOutputStream dataOutStream;
 	DataInputStream dataInStream;
 	
-	public static String id;	// 회원의 아이디 값 static 변수로 제어
-	public static int table;
+	public static String id = null;	// 회원의 아이디 값 static 변수로 제어
+	public static String table = null;	// 회원이 예약한 테이블 값 static 변수로 제어
 	
 	public Function() {
 		try {

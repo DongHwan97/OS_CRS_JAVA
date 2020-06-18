@@ -22,22 +22,22 @@
             <Image url="@../Pictures/backBtn.png" />
          </image>
       </ImageView>
-      <TextField fx:id="nameField" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="143.0" layoutY="204.0" prefWidth="214.0">
+      <TextField fx:id="nameField" alignment="CENTER" blendMode="MULTIPLY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="143.0" layoutY="204.0" prefWidth="214.0" scaleShape="false">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="idField" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="143.0" layoutY="282.0" prefWidth="214.0">
+      <TextField fx:id="idField" alignment="CENTER" blendMode="MULTIPLY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="143.0" layoutY="282.0" prefWidth="214.0" scaleShape="false">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="pwField" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="143.0" layoutY="365.0" prefWidth="214.0">
+      <TextField fx:id="pwField" alignment="CENTER" blendMode="MULTIPLY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="143.0" layoutY="365.0" prefWidth="214.0" scaleShape="false">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="birthField" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="142.0" layoutY="447.0" prefWidth="214.0">
+      <TextField fx:id="birthField" alignment="CENTER" blendMode="MULTIPLY" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="142.0" layoutY="447.0" prefWidth="214.0" scaleShape="false">
          <font>
             <Font name="Calibri" size="20.0" />
          </font>

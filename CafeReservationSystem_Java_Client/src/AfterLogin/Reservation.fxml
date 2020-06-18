@@ -22,9 +22,9 @@
             <Font name="Calibri" size="50.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="26.0" layoutX="95.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6c0b9" height="26.0" layoutX="95.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
-      <Button fx:id="mypageBtn" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="My page">
+      <Rectangle fx:id="possible" arcHeight="5.0" arcWidth="5.0" fill="#8364ccba" height="26.0" layoutX="95.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="26.0" layoutX="95.0" layoutY="207.0" stroke="BLACK" strokeType="INSIDE" width="26.0" />
+      <Button fx:id="mypageBtn" alignment="CENTER" blendMode="MULTIPLY" cacheShape="false" centerShape="false" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="413.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" scaleShape="false" text="My page">
          <font>
             <Font name="Calibri" size="10.0" />
          </font>
@@ -71,16 +71,16 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="170.0" layoutY="466.0" prefHeight="15.0" prefWidth="202.0" text="20:00 ~ 24:00">
+      <Label layoutX="170.0" layoutY="466.0" prefHeight="15.0" prefWidth="202.0" text="20:00 ~ 22:00">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Rectangle fx:id="firstTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
-      <Rectangle fx:id="sixthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="466.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
-      <Rectangle fx:id="secondTime" arcHeight="5.0" arcWidth="5.0" fill="#d1ccb200" height="32.0" layoutX="89.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
-      <Rectangle fx:id="thirdTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
-      <Rectangle fx:id="fourthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
-      <Rectangle fx:id="fifthTime" arcHeight="5.0" arcWidth="5.0" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="firstTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="sixthTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="466.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="secondTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#d1ccb200" height="32.0" layoutX="89.0" layoutY="306.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="thirdTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="fourthTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+      <Rectangle fx:id="fifthTime" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#261a020f" height="32.0" layoutX="89.0" layoutY="423.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
    </children>
 </Pane>

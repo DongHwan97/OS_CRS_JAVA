@@ -1,16 +1,13 @@
 package application;
 
-
 import java.io.IOException;
 import java.net.Socket;
-import java.net.SocketException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 
 

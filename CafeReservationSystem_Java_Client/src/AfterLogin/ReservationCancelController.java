@@ -11,14 +11,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 public class ReservationCancelController implements Initializable {
 
@@ -30,9 +29,11 @@ public class ReservationCancelController implements Initializable {
    
    String reservTime;
    
+   boolean reserved = false;
+   
    @FXML ImageView back;
    
-   @FXML TextField reservationInfo;
+   @FXML TextArea reservationInfo;
    
    @FXML Button cancelBtn;
    
@@ -48,7 +49,8 @@ public class ReservationCancelController implements Initializable {
       teduri1.setColor(teduri);
       
       back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-      //reservationInfo();
+      
+      reservationInfo();
    }
    
    // 뒤로가기 이미지에 마우스가 들어왔을 때
@@ -79,41 +81,71 @@ public class ReservationCancelController implements Initializable {
             f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
          }
       }
-      
-      f.changeScene("../AfterLogin/MyPage.fxml", cancelBtn);   // 마이페이지 창으로 화면 전환
    }
    
-   // DB에 질의해서 해당 사용자의 예약 정보 TextField에 삽입
+   // DB에 질의해서 해당 사용자의 예약 정보 TextArea에 삽입
    public void reservationInfo() {
 	  String info;
       String tableNo;
       String time;
       
       try {
-         f.wrtieServer("SR_" + Function.id);   // 서버로 예약정보확인용 문자열 전송
+         f.wrtieServer("SR_" + Function.id);	// 서버로 예약정보확인용 문자열 전송
          info = f.readServer();
-         tableNo = info.split("_")[0];
-         time = info.split("_")[1];
          
-         if (info.equals("fail")) {
-        	 reservationInfo.setText("예약하지 않았습니다.");
-         } else if (time.equals("one")) {
-        	 reservationInfo.setText(Function.id  + " 님은 ");
-         } else if (time.equals("two")) {
-        	 
-         } else if (time.equals("three")) {
-        	 
-         } else if (time.equals("four")) {
-        	 
-         } else if (time.equals("five")) {
-        	 
-         } else {
-        	 
+         if (info.equals("fail")) {				// 서버로부터 읽은 문자열이 "fail"일 경우
+        	 reservationInfo.appendText("\n");	// 해당 사용자에게 예약 정보가 없다는 문자열을 TextArea로 append하기
+        	 reservationInfo.appendText(Function.id +" 님의\n");
+        	 reservationInfo.appendText("예약 정보가\n");
+        	 reservationInfo.appendText("존재하지 않습니다.");
+        	 reserved = false;	// 예약하지 않은 사용자
+        	 cancelBtn.setDisable(true);
+        	 return;
          }
-         info = f.readServer();               // 서버로부터 읽어들인 문자열 info에 저장
-         info.split("");                     // split() 메소드를 사용하여 문자열 분해
+         
+         // 문자열이 "fail"이 아니라면 아래의 코드들 실행
+         
+         tableNo = info.split("_")[0];	// 서버로부터 받은 문자열
+         time = info.split("_")[1];		// split해서 저장
+         
+         Function.table = tableNo;
+         reservTime = time;
+         reserved = true;	// 예약한 사용자라
+         
+         if (time.equals("one")) {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("10시 ~ 12시에 예약하셨습니다.");
+         } else if (time.equals("two")) {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("12시 ~ 14시에 예약하셨습니다.");
+         } else if (time.equals("three")) {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("14시 ~ 16시에 예약하셨습니다.");
+         } else if (time.equals("four")) {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("16시 ~ 18시에 예약하셨습니다.");
+         } else if (time.equals("five")) {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("18시 ~ 20시에 예약하셨습니다.");
+         } else {
+        	 reservationInfo.appendText("\n");
+        	 reservationInfo.appendText(Function.id +" 님은\n");
+        	 reservationInfo.appendText(tableNo + "번 테이블의\n");
+        	 reservationInfo.appendText("20시 ~ 22시에 예약하셨습니다.");
+         }
       } catch(IOException e) {
          f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+         reserved = false;	// 예약하지 않은 사용자 or 서버 에러
       }
    }
 }

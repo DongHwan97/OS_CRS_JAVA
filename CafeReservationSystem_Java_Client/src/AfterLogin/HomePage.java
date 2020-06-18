@@ -1,14 +1,19 @@
 package AfterLogin;
 
+import java.awt.Desktop;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class HomePage {
 	public HomePage() {
-		Runtime runtime = Runtime.getRuntime();
 		try {
-			runtime.exec("C:/Program Files/Internet Explorer/iexplorer.exe http://localhost:18080/CafeReservationSystem/main.jsp");
-		} catch (IOException ex) {
+	         Desktop.getDesktop().browse(new URI("http://localhost:18080/CafeReservationSystem/main.jsp"));
 
-		}
+	      }catch(IOException e) {
+	         e.printStackTrace();
+	      }catch(URISyntaxException e) {
+	         e.printStackTrace();
+	      }
 	}
 }

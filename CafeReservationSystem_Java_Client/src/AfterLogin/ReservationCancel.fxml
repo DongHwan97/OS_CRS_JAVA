@@ -22,17 +22,17 @@
             <Image url="@../Pictures/backBtn.png" />
          </image>
       </ImageView>
-      <Button fx:id="cancelBtn" blendMode="LIGHTEN" layoutX="110.0" layoutY="446.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="280.0" text="Reservation cancel">
+      <Button fx:id="cancelBtn" layoutX="110.0" layoutY="446.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="280.0" text="Reservation cancel">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <TextArea fx:id="reservationInfo" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="99.0" layoutY="194.0" prefHeight="200.0" prefWidth="300.0" scaleShape="false" text="sdfsdfsd">
+      <TextArea fx:id="reservationInfo" cacheShape="false" centerShape="false" editable="false" focusTraversable="false" layoutX="89.0" layoutY="196.0" prefHeight="170.0" prefWidth="320.0" scaleShape="false">
          <effect>
             <DropShadow />
          </effect>
          <font>
-            <Font size="20.0" />
+            <Font name="Calibri" size="20.0" />
          </font>
       </TextArea>
    </children>

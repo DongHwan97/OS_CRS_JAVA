@@ -37,14 +37,13 @@ public class MyPageController implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
 		logoutBtn.setOnAction(event -> btnClicked(event));
 		myInfoBtn.setOnAction(event -> btnClicked(event));
 		reservationBtn.setOnAction(event -> btnClicked(event));
 		
 		back.setOnMouseEntered(event -> mouseEntered(event));
-		
 		back.setOnMouseExited(event -> mouseExited(event));
-		
 		back.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
@@ -81,11 +80,18 @@ public class MyPageController implements Initializable {
 		}
 		// 회원정보 확인 버튼을 눌렀을 때
 		else if (e.getSource() == myInfoBtn) {
-			f.changeScene("../AfterLogin/MyInfo.fxml", myInfoBtn);	// 회원정보 창으로 화면 전환
+			
+			Optional<ButtonType> result = f.popUp(AlertType.CONFIRMATION, "회원정보 확인 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 이동합니다.").showAndWait();
+			if (result.get() == ButtonType.OK) {						// 팝업창에서 확인 버튼 클릭시
+				f.changeScene("../AfterLogin/MyInfo.fxml", myInfoBtn);	// 회원정보 확인 창으로 화면 전환
+			}
 		}
 		// 예약 확인 및 취소 버튼을 눌렀을 때
 		else {
-			f.changeScene("../AfterLogin/ReservationCancel.fxml", reservationBtn);	// 예약 창으로 화면 전환
+			Optional<ButtonType> result = f.popUp(AlertType.CONFIRMATION, "예약 확인 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 이동합니다.").showAndWait();
+			if (result.get() == ButtonType.OK) {						// 팝업창에서 확인 버튼 클릭시
+				f.changeScene("../AfterLogin/ReservationCancel.fxml", reservationBtn);	// 예약 창으로 화면 전환
+			}
 		}
 	}
 }
