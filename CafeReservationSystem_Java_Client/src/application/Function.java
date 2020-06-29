@@ -33,8 +33,8 @@ public class Function {
 	DataOutputStream dataOutStream;
 	DataInputStream dataInStream;
 	
-	public static String id = null;	// 회원의 아이디 값 static 변수로 제어
-	public static String table = null;	// 회원이 예약한 테이블 값 static 변수로 제어
+	public static String id = "";	// 회원의 아이디 값 static 변수로 제어
+	public static String table = "";	// 회원이 예약한 테이블 값 static 변수로 제어
 	
 	public Function() {
 		try {
