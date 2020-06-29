@@ -25,10 +25,11 @@ public class ReservationController implements Initializable {
 	Function f = new Function();
 	
 	DropShadow teduri1 = new DropShadow();
-	DropShadow teduri2 = new DropShadow();
 	
 	Color teduri = Color.web("#0022ff");
-	Color color = Color.web("#8364ccba");
+	Color color2 = Color.web("#8366cc");
+	Color color3 = Color.web("#000000");
+	Color color4 = Color.web("#000000b2");
 	
 	@FXML ImageView back;
 	@FXML ImageView mypageImage;
@@ -43,7 +44,7 @@ public class ReservationController implements Initializable {
 	@FXML Rectangle fourthTime;
 	@FXML Rectangle fifthTime;
 	@FXML Rectangle sixthTime;
-	@FXML Rectangle possible;
+	@FXML Rectangle impossible;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -78,9 +79,7 @@ public class ReservationController implements Initializable {
 		sixthTime.setOnMousePressed(event -> mousePressed(event));
 		
 		teduri1.setColor(teduri);
-		teduri2.setColor(teduri);
-		possible.setEffect(teduri2);
-		possible.setFill(color);
+		impossible.setFill(color4);
 		
 		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
 		mypageImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/18.png")));
@@ -108,12 +107,10 @@ public class ReservationController implements Initializable {
 			f.wrtieServer("ST_" + f.table);
 			msg = f.readServer();
 			
-			System.out.println(msg);
-			
 			for (int i = 0; i < 6; i++) {
 				splitMsg[i] = msg.split("_")[i];
-				System.out.println(splitMsg[i]);
 				if (splitMsg[i].equals("null")) {
+					tangle[i].setFill(color4);
 					tangle[i].setDisable(false);
 				}
 			}
@@ -121,39 +118,39 @@ public class ReservationController implements Initializable {
 			f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 		}
 	}
-	// 뒤로가기 이미지에 마우스가 들어왔을 때
+	// 시간 선택이나 뒤로가기 버튼에 마우스가 들어왔을 때
 	public void mouseEntered(MouseEvent e) {
 		if (e.getSource() == back) {
 			back.setEffect(teduri1);
-		} else if (e.getSource() == firstTime && !firstTime.isDisable()) {
+		} else if (e.getSource() == firstTime && firstTime.isDisable()) {
 			firstTime.setEffect(teduri1);
-		} else if (e.getSource() == secondTime && !secondTime.isDisable()) {
+		} else if (e.getSource() == secondTime && secondTime.isDisable()) {
 			secondTime.setEffect(teduri1);
-		} else if (e.getSource() == thirdTime && !thirdTime.isDisable()) {
+		} else if (e.getSource() == thirdTime && thirdTime.isDisable()) {
 			thirdTime.setEffect(teduri1);
-		} else if (e.getSource() == fourthTime && !fourthTime.isDisable()) {
+		} else if (e.getSource() == fourthTime && fourthTime.isDisable()) {
 			fourthTime.setEffect(teduri1);
-		} else if (e.getSource() == fifthTime && !fifthTime.isDisable()) {
+		} else if (e.getSource() == fifthTime && fifthTime.isDisable()) {
 			fifthTime.setEffect(teduri1);
-		} else if (e.getSource() == sixthTime && !sixthTime.isDisable()) {
+		} else if (e.getSource() == sixthTime && sixthTime.isDisable()) {
 			sixthTime.setEffect(teduri1);
 		}
 	}
-	// 뒤로가기 이미지에서 마우스가 나갔을 때
+	// 시간 선택이나 뒤로가기 버튼에 마우스가 나갔을 때
 	public void mouseExited(MouseEvent e) {
 		if (e.getSource() == back) {
 			back.setEffect(null);
-		} else if (e.getSource() == firstTime) {
+		} else if (e.getSource() == firstTime && firstTime.isDisable()) {
 			firstTime.setEffect(null);
-		} else if (e.getSource() == secondTime) {
+		} else if (e.getSource() == secondTime && secondTime.isDisable()) {
 			secondTime.setEffect(null);
-		} else if (e.getSource() == thirdTime) {
+		} else if (e.getSource() == thirdTime && thirdTime.isDisable()) {
 			thirdTime.setEffect(null);
-		} else if (e.getSource() == fourthTime) {
+		} else if (e.getSource() == fourthTime && fourthTime.isDisable()) {
 			fourthTime.setEffect(null);
-		} else if (e.getSource() == fifthTime) {
+		} else if (e.getSource() == fifthTime && fifthTime.isDisable()) {
 			fifthTime.setEffect(null);
-		} else {
+		} else if (e.getSource() == sixthTime && sixthTime.isDisable()) {
 			sixthTime.setEffect(null);
 		}
 	}
@@ -163,10 +160,9 @@ public class ReservationController implements Initializable {
 		Optional<ButtonType> result;
 		
 		if (e.getSource() == back) {
-			f.changeScene("/AfterLogin/CafeTables.fxml", mypageBtn);
+			f.changeScene("/AfterLogin/CafeTable.fxml", mypageBtn);	// 테이블 선택 화면으로 전환
 			back.setEffect(null);
-		}
-		else if (e.getSource() == firstTime && !firstTime.isDisable()) {
+		} else if (e.getSource() == firstTime && !firstTime.isDisable()) {
 			result = f.popUp(AlertType.CONFIRMATION, "'10시 ~ 12시' 예약하시겠습니까?", "").showAndWait();
 			if (result.get() == ButtonType.OK) {
 				// 서버로 예약용 문자열 전송
@@ -257,5 +253,6 @@ public class ReservationController implements Initializable {
 				}
 			}
 		}
+		f.changeScene("/AfterLogin/MainMenu.fxml", mypageBtn);	// 메인메뉴로 화면 전환
 	}
 }

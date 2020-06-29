@@ -92,19 +92,20 @@ public class SignUpController implements Initializable {
 	public void btnClicked(ActionEvent e) {
 		
 		// TextField들에게서 text값 가져오기
-		String name = nameField.getText();
-		String id = idField.getText();
-		String pw1 = pwField1.getText();
-		String pw2 = pwField2.getText();
+		// trim 메소드를 사용하여 빈칸 제거
+		String name = nameField.getText().trim();
+		String id = idField.getText().trim();
+		String pw1 = pwField1.getText().trim();
+		String pw2 = pwField2.getText().trim();
 		String jumin1 = juminField1.getText();
 		String jumin2 = juminField2.getText();
 		
 		// 중복확인 버튼을 눌렸을 경우
-		if (e.getSource() == overlapBtn) {	// 이름이 빈칸일 경우
-			if (name.equals("")) {
-				f.popUp(AlertType.WARNING, "이름은 공백일 수 없습니다.", "이름을 입력해주세요.").show();
+		if (e.getSource() == overlapBtn) {	// 이름 1글자 이하일 경우
+			if (id.length() < 5) {
+				f.popUp(AlertType.WARNING, "아이디는 5자 이상 입력해주세요", "아이디를 다시 입력해주세요.").show();
 			}
-			else {	// 빈칸이 아닐 경우
+			else {	// 모든 조건을 충족할 경우
 				// 서버로 중복확인용 문자열 보내기 ("메시지 타입_id")
 				try {
 					f.wrtieServer("CI_" + id);
@@ -129,9 +130,9 @@ public class SignUpController implements Initializable {
 			if (name.equals("")) {
 				f.popUp(AlertType.WARNING, "이름은 공백일 수 없습니다.", "이름을 입력해주세요.").show();
 			}
-			// 아이디가 빈칸일 경우
-			else if (id.equals("")) {
-				f.popUp(AlertType.WARNING, "아이디는 공백일 수 없습니다.", "아이디를 입력해주세요.").show();
+			// 이름은 2글자 이상만 입력 가능
+			else if (name.length() < 2) {
+				f.popUp(AlertType.WARNING, "이름이 너무 짧습니다.", "이름은 두 글자 이상 입력해주세요").show();
 			}
 			// 중복확인이 되지 않았을 경우
 			else if (overlap) {
@@ -140,6 +141,10 @@ public class SignUpController implements Initializable {
 			// 패스워드가 빈칸일 경우
 			else if (pw1.equals("") || pw2.equals("")) {
 				f.popUp(AlertType.WARNING, "패스워드는 공백일 수 없습니다.", "패스워드를 입력해주세요.").show();
+			}
+			// 패스워드는 4글자 이상만 입력 가능
+			else if (pw1.length() < 4) {
+				f.popUp(AlertType.WARNING, "패스워드는 4자 이상 입력해야 합니다.", "패스워드를 입력해주세요.").show();
 			}
 			// 주민등록번호가 빈칸일 경우
 			else if (jumin1.equals("") || jumin2.equals("")) {
@@ -169,7 +174,12 @@ public class SignUpController implements Initializable {
 				// 서버로 회원가입용 문자열 보내기 ("메시지 타입_이름_아이디_패스워드_주민등록번호")
 				try {
 					f.wrtieServer("MJ_" + name + "_" + id + "_" + pw1 + "_" + jumin1 + jumin2);
-					f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+					String result = "";
+					if ((result = f.readServer()).equals("fail")) {	// 읽어들인 문자열이 fail 이면
+						f.popUp(AlertType.WARNING, "회원가입 실패!!!", "다시 시도해주시기 바랍니다.").showAndWait();
+					} else {	// 읽어들인 문자열이 fail 이 아니면 (success로 오게 됨)
+						f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+					}
 					f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
 				} catch(IOException ex) {
 					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
@@ -193,9 +203,9 @@ public class SignUpController implements Initializable {
 		if (name.equals("")) {
 			f.popUp(AlertType.WARNING, "이름은 공백일 수 없습니다.", "이름을 입력해주세요.").show();
 		}
-		// 아이디가 빈칸일 경우
-		else if (id.equals("")) {
-			f.popUp(AlertType.WARNING, "아이디는 공백일 수 없습니다.", "아이디를 입력해주세요.").show();
+		// 이름은 2글자 이상만 입력 가능
+		else if (name.length() < 2) {
+			f.popUp(AlertType.WARNING, "이름이 너무 짧습니다.", "이름은 두 글자 이상 입력해주세요").show();
 		}
 		// 중복확인이 되지 않았을 경우
 		else if (overlap) {
@@ -205,11 +215,15 @@ public class SignUpController implements Initializable {
 		else if (pw1.equals("") || pw2.equals("")) {
 			f.popUp(AlertType.WARNING, "패스워드는 공백일 수 없습니다.", "패스워드를 입력해주세요.").show();
 		}
+		// 패스워드는 4글자 이상만 입력 가능
+		else if (pw1.length() < 4) {
+			f.popUp(AlertType.WARNING, "패스워드는 4자 이상 입력해야 합니다.", "패스워드를 입력해주세요.").show();
+		}
 		// 주민등록번호가 빈칸일 경우
 		else if (jumin1.equals("") || jumin2.equals("")) {
 			f.popUp(AlertType.WARNING, "주민등록번호는 공백일 수 없습니다.", "주민등록번호를 입력해주세요.").show();
 		}
-		// 주민등록번호 앞 6자리 혹은 뒤 7자리, 즉, 자릿수를 지키지 않았을 경우
+		// 주민등록번호 앞 6자리 혹은 뒤 7자리, 자릿수를 지키지 않았을 경우
 		else if (jumin1.length() != 6 || jumin2.length() != 7) {
 			f.popUp(AlertType.WARNING, "주민등록번호가 잘못 입력되었습니다.", "정확한 값을 입력해주세요.").show();
 		}
@@ -233,7 +247,12 @@ public class SignUpController implements Initializable {
 			// 서버로 회원가입용 문자열 보내기 ("메시지 타입_이름_아이디_패스워드_주민등록번호")
 			try {
 				f.wrtieServer("MJ_" + name + "_" + id + "_" + pw1 + "_" + jumin1 + jumin2);
-				f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+				String result = "";
+				if ((result = f.readServer()).equals("fail")) {	// 읽어들인 문자열이 fail 이면
+					f.popUp(AlertType.WARNING, "회원가입 실패!!!", "다시 시도해주시기 바랍니다.").showAndWait();
+				} else {	// 읽어들인 문자열이 fail 이 아니면 (success로 오게 됨)
+					f.popUp(AlertType.INFORMATION, "회원가입 성공!!!", "로그인 화면으로 이동합니다.").showAndWait();
+				}
 				f.changeScene("/BeforeLogin/LoginMenu.fxml", idField);
 			} catch(IOException ex) {
 				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();

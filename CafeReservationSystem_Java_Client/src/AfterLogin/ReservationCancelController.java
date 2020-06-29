@@ -75,7 +75,12 @@ public class ReservationCancelController implements Initializable {
          // 서버로 예약취소용 문자열 전송 ("메시지타입_아이디_테이블번호_시간");
          try {
             f.wrtieServer("CR_" + Function.table + "_" + reservTime);
-            f.popUp(AlertType.INFORMATION, "예약이 취소되었습니다!!!", "").showAndWait();
+            String resultMsg = "";
+            if ((resultMsg = f.readServer()).equals("fail")) {	// 서버로부터 받은 문자열이 fail 이면
+            	f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").showAndWait();
+            } else {											// 서버로부터 받은 문자열이 fail이 아니면 (success가 오게 됨)
+            	f.popUp(AlertType.INFORMATION, "예약이 취소되었습니다!!!", "").showAndWait();
+            }
             f.changeScene("../AfterLogin/MyPage.fxml", cancelBtn);   // 마이페이지 창으로 화면 전환
          } catch (IOException ex) {
             f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
@@ -87,6 +92,7 @@ public class ReservationCancelController implements Initializable {
    public void reservationInfo() {
 	  String info;
       String tableNo;
+      
       String time;
       
       try {
@@ -110,7 +116,7 @@ public class ReservationCancelController implements Initializable {
          
          Function.table = tableNo;
          reservTime = time;
-         reserved = true;	// 예약한 사용자라
+         reserved = true;	// 예약한 사용자
          
          if (time.equals("one")) {
         	 reservationInfo.appendText("\n");

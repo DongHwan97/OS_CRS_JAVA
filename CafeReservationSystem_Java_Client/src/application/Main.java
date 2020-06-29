@@ -19,7 +19,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		
 		try {
-			socket = new Socket("192.168.0.28", 7908);
+			socket = new Socket("192.168.0.19", 7908);
 		} catch (IOException e) {
 			System.out.println("서버 연결 안됨");
 			System.exit(0);
