@@ -212,8 +212,6 @@ public class LoginMenuController implements Initializable {
 			} catch(IOException ex) {
 				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 			}
-			
-			//f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
 		}
 	}
 }

@@ -107,7 +107,6 @@ public class ReservationController implements Initializable {
 		if (e.getSource() == back) {
 			back.setEffect(teduri1);
 		} else if (e.getSource() == firstTime) {
-			System.out.println("1");
 			firstTime.setEffect(teduri2);
 		} else if (e.getSource() == secondTime) {
 			secondTime.setEffect(teduri2);
@@ -126,7 +125,6 @@ public class ReservationController implements Initializable {
 		if (e.getSource() == back) {
 			back.setEffect(null);
 		} else if (e.getSource() == firstTime) {
-			System.out.println("2");
 			firstTime.setEffect(null);
 		} else if (e.getSource() == secondTime) {
 			secondTime.setEffect(null);
@@ -146,7 +144,7 @@ public class ReservationController implements Initializable {
 		Optional<ButtonType> result;
 		
 		if (e.getSource() == back) {
-			f.changeScene("/AfterLogin/CafeTable.fxml", mypageBtn);	// 테이블 선택 화면으로 전환
+			f.changeScene("/AfterLogin/CafeTables.fxml", tableInfo);	// 테이블 선택 화면으로 전환
 			back.setEffect(null);
 		} else if (e.getSource() == firstTime) {
 			result = f.popUp(AlertType.CONFIRMATION, "'10시 ~ 12시' 예약하시겠습니까?", "").showAndWait();
