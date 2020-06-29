@@ -74,17 +74,42 @@ public class MyInfoController implements Initializable {
 	// DB에서 회원 정보 받아온 후에 TextField 들에 삽입
 	public void showInfo() {
 		String info;
+		String pw;
+		String birth;
+		char[] pwArr;
+		char[] birthArr;
+		
 		try {
 			f.wrtieServer("MP_" + Function.id);	// 서버로 회원정보용 문자열 전송
 			//이름_아이디_pw_생일
 			if ((info = f.readServer()).equals("fail")) {
-				System.out.println("고쳐");
+				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
+				return;
 			}
-			//info = f.readServer();					// 서버로부터 읽어들인 문자열 info에 저장
 			nameField.setText(info.split("_")[0]);		// split() 메소드를 사용하여 문자열 분해
 			idField.setText(info.split("_")[1]);
-			pwField.setText(info.split("_")[2]);
-			birthField.setText(info.split("_")[3]);
+			pw = info.split("_")[2];
+			birth = info.split("_")[3];
+			
+			pwArr = pw.toCharArray();
+			birthArr = birth.toCharArray();
+			
+			for (int i = 0; i < pw.length(); i++) {
+				if (i > 2) {
+					pwArr[i] = '*';
+				}
+			}
+			for (int i = 0; i < birth.length(); i++) {
+				if (i > 5) {
+					birthArr[i] = '*';
+				}
+			}
+			pw = String.valueOf(pwArr);
+			birth = String.valueOf(birthArr);
+			
+			pwField.setText(pw);
+			birthField.setText(birth);
+			
 		} catch (IOException e) {
 			f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 		}
