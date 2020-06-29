@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -8,121 +9,69 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MainMenuController">
-   <top>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="다온 Cafe">
-               <font>
-                  <Font size="40.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-            </Label>
-         </children>
-      </HBox>
-   </top>
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane alignment="CENTER" prefHeight="71.0" prefWidth="500.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <TextField fx:id="idField" alignment="CENTER" editable="false" prefHeight="42.0" prefWidth="147.0" text="UserID">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                           <effect>
-                              <DropShadow color="#0022ff" />
-                           </effect>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <Button fx:id="mypageBtn" mnemonicParsing="false" text="마이 페이지">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                           <effect>
-                              <DropShadow color="#0022ff" />
-                           </effect>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </GridPane>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-               <children>
-                  <Button fx:id="reservationBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="자리 확인 및 예약">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-               <children>
-                  <Button fx:id="menuBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="카페 메뉴">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
-               <children>
-                  <Button fx:id="homepageBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="홈페이지 이동">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
-               <children>
-                  <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="70.0" prefWidth="400.0" text="로그아웃">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </GridPane>
-   </center>
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
-</BorderPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.MainMenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="80.0" text="다온 Cafe">
+         <font>
+            <Font name="Calibri" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="reservImage" fitHeight="41.0" fitWidth="54.0" layoutX="107.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/26.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="100.0" layoutY="167.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="reservationBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="100.0" layoutY="167.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Reservation">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="menuImage" fitHeight="50.0" fitWidth="50.0" layoutX="103.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/25.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="menuBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="255.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Menu">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="homeImage" fitHeight="41.0" fitWidth="54.0" layoutX="106.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/19.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="343.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="homepageBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="343.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Home Page">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="logoutImage" fitHeight="41.0" fitWidth="54.0" layoutX="112.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/24.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="70.0" layoutX="99.0" layoutY="432.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Button fx:id="logoutBtn" alignment="CENTER" blendMode="MULTIPLY" layoutX="99.0" layoutY="432.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="300.0" text="Log out">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="WHITE" height="50.0" layoutX="413.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Button fx:id="mypageBtn" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="88.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="My page">
+         <font>
+            <Font name="Calibri" size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="mypageImage" fitHeight="30.0" fitWidth="50.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/18.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>

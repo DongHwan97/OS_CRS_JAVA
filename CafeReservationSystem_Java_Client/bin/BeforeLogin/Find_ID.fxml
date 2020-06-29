@@ -22,11 +22,6 @@
             <Image url="@../Pictures/backBtn.png" />
          </image>
       </ImageView>
-      <Button fx:id="checkBtn" alignment="CENTER" blendMode="LIGHTEN" layoutX="175.0" layoutY="431.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Check">
-         <font>
-            <Font name="Calibri" size="22.0" />
-         </font>
-      </Button>
       <TextField fx:id="nameField" alignment="CENTER" blendMode="MULTIPLY" layoutX="143.0" layoutY="248.0" promptText="Please Enter Name">
          <font>
             <Font name="Calibri" size="18.0" />
@@ -43,7 +38,7 @@
          </font>
       </PasswordField>
       <Label layoutX="247.0" layoutY="349.0" text="-" />
-      <Label layoutX="211.0" layoutY="202.0" text="NAME">
+      <Label layoutX="183.0" layoutY="206.0" text="Your name">
          <font>
             <Font name="Calibri" size="30.0" />
          </font>
@@ -53,5 +48,20 @@
             <Font name="Calibri" size="30.0" />
          </font>
       </Label>
+      <Button fx:id="checkBtn" alignment="CENTER" blendMode="LIGHTEN" layoutX="175.0" layoutY="431.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Check">
+         <font>
+            <Font name="Calibri" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="nameImage" fitHeight="42.0" fitWidth="43.0" layoutX="89.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="birthImage" fitHeight="42.0" fitWidth="42.0" layoutX="89.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/17.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

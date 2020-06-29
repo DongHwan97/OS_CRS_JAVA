@@ -6,7 +6,6 @@
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BeforeLogin.LoginMenuController">
    <children>
@@ -25,12 +24,17 @@
             <Font name="Calibri" size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="171.0" layoutY="194.0" text="USERNAME">
+      <PasswordField fx:id="pwField" alignment="CENTER" blendMode="MULTIPLY" layoutX="149.0" layoutY="360.0" prefHeight="37.0" prefWidth="200.0" promptText="Please Enter Password">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </PasswordField>
+      <Label layoutX="179.0" layoutY="194.0" text="Username">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="171.0" layoutY="307.0" text="PASSWORD">
+      <Label layoutX="183.0" layoutY="307.0" text="Password">
          <font>
             <Font size="30.0" />
          </font>
@@ -64,10 +68,5 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="pwField" alignment="CENTER" blendMode="MULTIPLY" layoutX="149.0" layoutY="360.0" prefHeight="37.0" prefWidth="200.0" promptText="Please Enter Password">
-         <font>
-            <Font name="Calibri" size="16.0" />
-         </font>
-      </PasswordField>
    </children>
 </Pane>

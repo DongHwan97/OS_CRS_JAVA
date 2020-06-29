@@ -10,127 +10,139 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.CafeTablesController">
-   <cursor>
-      <Cursor fx:constant="DEFAULT" />
-   </cursor>
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="150.0">
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fx:id="back" blendMode="SRC_ATOP" fitHeight="48.0" fitWidth="113.0" layoutX="24.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../back.PNG" />
-                           </image>
-                        </ImageView>
-                        <Rectangle fx:id="backBorder1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="40.0" layoutY="51.0" opacity="0.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
-                        <Rectangle fx:id="backBorder2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="17.0" layoutX="52.0" layoutY="55.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
-                     </children>
-                  </Pane>
-               </children>
-            </HBox>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="다온 Cafe">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                     <effect>
-                        <DropShadow color="#0022ff" />
-                     </effect>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </HBox>
-   </top>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="double_1" layoutX="26.0" layoutY="80.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="137.0" text="2인석">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-            </Button>
-            <Button fx:id="double_2" layoutX="182.0" layoutY="80.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="137.0" text="2인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="double_3" layoutX="337.0" layoutY="80.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="137.0" text="2인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="quadruple_1" layoutX="95.0" layoutY="227.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="137.0" text="4인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="quadruple_2" layoutX="269.0" layoutY="227.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="137.0" text="4인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="single_1" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="463.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="1인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="single_3" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="463.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="1인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="single_4" alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="463.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="1인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="single_5" alignment="CENTER" contentDisplay="CENTER" layoutX="394.0" layoutY="463.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="1인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="single_2" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="463.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" text="1인석">
-               <effect>
-                  <DropShadow color="#0022ff" />
-               </effect>
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-   </center>
-</BorderPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" styleClass="bodybg" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AfterLogin.CafeTablesController">
+   <children>
+      <ImageView fx:id="back" fitHeight="51.0" fitWidth="54.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/backBtn.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="34.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/111.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff54" height="340.0" layoutX="24.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="DARKEN" fill="#ff8b76" height="40.0" layoutX="199.0" layoutY="163.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Label layoutX="230.0" layoutY="171.0" text="입구">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="40.0" layoutX="24.0" layoutY="463.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="25.0" layoutY="446.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="117.0" layoutY="446.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="218.0" layoutY="446.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="315.0" layoutY="446.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="413.0" layoutY="446.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
+      <Label fx:id="label" layoutX="342.0" layoutY="503.0" text="ㄴ1인 테이블" textFill="#fce9e9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="38.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="38.0" layoutY="304.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="35.0" layoutX="81.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Label layoutX="44.0" layoutY="241.0" text="2인">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="347.0" text="2인">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="362.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="362.0" layoutY="308.0" stroke="BLACK" strokeType="INSIDE" width="80.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="346.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="449.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="346.0" layoutY="308.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="449.0" layoutY="308.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="346.0" layoutY="363.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="449.0" layoutY="363.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="449.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="45.0" layoutX="346.0" layoutY="245.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Label layoutX="388.0" layoutY="241.0" text="4인">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="361.0" text="4인">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="35.0" layoutX="81.0" layoutY="244.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="35.0" layoutX="83.0" layoutY="304.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="35.0" layoutX="83.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" width="9.0" />
+      <Label layoutX="72.0" layoutY="133.0" text="Choice" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="40.0" layoutX="29.0" layoutY="125.0" stroke="BLACK" strokeType="INSIDE" width="119.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="138.0" layoutY="269.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="141.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="198.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="250.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="253.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="201.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ae9276" height="9.0" layoutX="144.0" layoutY="372.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Label layoutX="204.0" layoutY="322.0" text="6인">
+         <font>
+            <Font name="Calibri" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="tableNo_3" fitHeight="25.0" fitWidth="40.0" layoutX="206.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/333.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_2" fitHeight="25.0" fitWidth="40.0" layoutX="46.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/222.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_9" fitHeight="25.0" fitWidth="40.0" layoutX="334.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/999.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_10" fitHeight="25.0" fitWidth="40.0" layoutX="432.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/1010.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_7" fitHeight="25.0" fitWidth="40.0" layoutX="136.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/777.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_1" fitHeight="25.0" fitWidth="40.0" layoutX="45.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/111.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_4" fitHeight="25.0" fitWidth="40.0" layoutX="390.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/444.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_5" fitHeight="25.0" fitWidth="40.0" layoutX="390.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/555.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_8" fitHeight="25.0" fitWidth="40.0" layoutX="237.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/888.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tableNo_6" fitHeight="25.0" fitWidth="40.0" layoutX="44.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/666.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

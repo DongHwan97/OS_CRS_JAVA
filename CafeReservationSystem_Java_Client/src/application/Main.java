@@ -21,7 +21,7 @@ public class Main extends Application {
 		try {
 			socket = new Socket("192.168.0.19", 7908);
 		} catch (IOException e) {
-			System.out.println("서버 연결 에러");
+			System.out.println("서버 연결 에러.");
 			System.exit(0);
 		}
 		
