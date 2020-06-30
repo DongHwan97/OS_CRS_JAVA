@@ -71,9 +71,9 @@ public class LoginMenuController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		pwImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/6.png")));
-		idImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/11.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		pwImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/6.png")));
+		idImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/11.png")));
 		
 		
 	}
@@ -171,7 +171,7 @@ public class LoginMenuController implements Initializable {
 				f.wrtieServer("LI_" + id + "_" + pw);
 				if(f.readServer().equals("success")) {	// 서버로부터 읽어들인 문자열이 OK일 경우
 					f.popUp(AlertType.INFORMATION, "로그인 성공!!!", "메인 메뉴로 이동합니다.").showAndWait();
-					f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
+					f.changeScene("/AfterLogin/MainMenu.fxml", pwField);
 					Function.id = id;
 				} else {
 					f.popUp(AlertType.ERROR, "로그인 실패!!!", "잘못된 아이디입니다.").showAndWait();
@@ -204,7 +204,7 @@ public class LoginMenuController implements Initializable {
 				f.wrtieServer("LI_" + id + "_" + pw);
 				if(f.readServer().equals("success")) {	// 서버로부터 읽어들인 문자열이 OK일 경우
 					f.popUp(AlertType.INFORMATION, "로그인 성공!!!", "메인 메뉴로 이동합니다.").showAndWait();
-					f.changeScene("../AfterLogin/MainMenu.fxml", pwField);
+					f.changeScene("/AfterLogin/MainMenu.fxml", pwField);
 					Function.id = id;
 				} else {
 					f.popUp(AlertType.ERROR, "로그인 실패!!!", "잘못된 아이디입니다.").showAndWait();

@@ -57,9 +57,9 @@ public class Find_IDController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		nameImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/16.png")));
-		birthImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/17.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		nameImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/16.png")));
+		birthImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/17.png")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때

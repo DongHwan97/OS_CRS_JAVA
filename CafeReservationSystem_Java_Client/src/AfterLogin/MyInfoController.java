@@ -48,11 +48,11 @@ public class MyInfoController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		nameImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/16.png")));
-		idImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/11.png")));
-		pwImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/6.png")));
-		birthImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/17.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		nameImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/16.png")));
+		idImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/11.png")));
+		pwImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/6.png")));
+		birthImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/17.png")));
 		
 		showInfo();
 	}

@@ -40,11 +40,11 @@ public class MainMenuController implements Initializable {
 		homepageBtn.setOnAction(event -> btnClicked(event));
 		reservationBtn.setOnAction(event -> btnClicked(event));
 		
-		reservImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/26.png")));
-		menuImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/25.png")));
-		mypageImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/18.png")));
-		homeImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/19.png")));
-		logoutImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/24.png")));
+		reservImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/26.png")));
+		menuImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/25.png")));
+		mypageImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/18.png")));
+		homeImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/19.png")));
+		logoutImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/24.png")));
 	}
 	
 	public void btnClicked(ActionEvent e) {
@@ -62,14 +62,14 @@ public class MainMenuController implements Initializable {
 		else if (e.getSource() == menuBtn) {
 			result = f.popUp(AlertType.CONFIRMATION, "카페 메뉴 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 화면이 전환됩니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("../AfterLogin/CafeMenu.fxml", menuBtn);
+				f.changeScene("/AfterLogin/CafeMenu.fxml", menuBtn);
 			}
 		}
 		// 마이 페이지 버튼을 눌렀을 때
 		else if (e.getSource() == mypageBtn) {
 			result = f.popUp(AlertType.CONFIRMATION, "마이페이지 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 화면이 전환됩니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("../AfterLogin/MyPage.fxml", mypageBtn);
+				f.changeScene("/AfterLogin/MyPage.fxml", mypageBtn);
 			}
 		}
 		// 홈페이지 이동 버튼을 눌렀을 때
@@ -84,7 +84,7 @@ public class MainMenuController implements Initializable {
 		else {
 			result = f.popUp(AlertType.CONFIRMATION, "자리 예약 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 화면이 전환됩니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {
-				f.changeScene("../AfterLogin/CafeTables.fxml", reservationBtn);
+				f.changeScene("/AfterLogin/CafeTables.fxml", reservationBtn);
 			}
 		}
 	}

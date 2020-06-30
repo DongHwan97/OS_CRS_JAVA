@@ -62,8 +62,8 @@ public class ReservationController implements Initializable {
 		teduri2.setColor(teduri);
 		impossible.setFill(color4);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		mypageImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/18.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		mypageImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/18.png")));
 	}
 	
 	public void btnClicked(ActionEvent e) {

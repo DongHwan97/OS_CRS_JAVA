@@ -48,7 +48,7 @@ public class ReservationCancelController implements Initializable {
       
       teduri1.setColor(teduri);
       
-      back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
+      back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
       
       reservationInfo();
    }
@@ -63,7 +63,7 @@ public class ReservationCancelController implements Initializable {
    }
    // 뒤로가기 이미지를 클릭했을 때
    public void mousePressed(MouseEvent e) {
-      f.changeScene("../AfterLogin/MyPage.fxml", cancelBtn);
+      f.changeScene("/AfterLogin/MyPage.fxml", cancelBtn);
       back.setEffect(null);
    }
    
@@ -81,7 +81,7 @@ public class ReservationCancelController implements Initializable {
             } else {											// 서버로부터 받은 문자열이 fail이 아니면 (success가 오게 됨)
             	f.popUp(AlertType.INFORMATION, "예약이 취소되었습니다!!!", "").showAndWait();
             }
-            f.changeScene("../AfterLogin/MyPage.fxml", cancelBtn);   // 마이페이지 창으로 화면 전환
+            f.changeScene("/AfterLogin/MyPage.fxml", cancelBtn);   // 마이페이지 창으로 화면 전환
          } catch (IOException ex) {
             f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
          }

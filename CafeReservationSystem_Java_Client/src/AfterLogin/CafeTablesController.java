@@ -82,17 +82,17 @@ public class CafeTablesController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		tableNo_1.setImage(new Image(getClass().getResourceAsStream("../Pictures/111.jpg")));
-		tableNo_2.setImage(new Image(getClass().getResourceAsStream("../Pictures/222.jpg")));
-		tableNo_3.setImage(new Image(getClass().getResourceAsStream("../Pictures/333.jpg")));
-		tableNo_4.setImage(new Image(getClass().getResourceAsStream("../Pictures/444.jpg")));
-		tableNo_5.setImage(new Image(getClass().getResourceAsStream("../Pictures/555.jpg")));
-		tableNo_6.setImage(new Image(getClass().getResourceAsStream("../Pictures/666.jpg")));
-		tableNo_7.setImage(new Image(getClass().getResourceAsStream("../Pictures/777.jpg")));
-		tableNo_8.setImage(new Image(getClass().getResourceAsStream("../Pictures/888.jpg")));
-		tableNo_9.setImage(new Image(getClass().getResourceAsStream("../Pictures/999.jpg")));
-		tableNo_10.setImage(new Image(getClass().getResourceAsStream("../Pictures/1010.jpg")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		tableNo_1.setImage(new Image(getClass().getResourceAsStream("/Pictures/111.jpg")));
+		tableNo_2.setImage(new Image(getClass().getResourceAsStream("/Pictures/222.jpg")));
+		tableNo_3.setImage(new Image(getClass().getResourceAsStream("/Pictures/333.jpg")));
+		tableNo_4.setImage(new Image(getClass().getResourceAsStream("/Pictures/444.jpg")));
+		tableNo_5.setImage(new Image(getClass().getResourceAsStream("/Pictures/555.jpg")));
+		tableNo_6.setImage(new Image(getClass().getResourceAsStream("/Pictures/666.jpg")));
+		tableNo_7.setImage(new Image(getClass().getResourceAsStream("/Pictures/777.jpg")));
+		tableNo_8.setImage(new Image(getClass().getResourceAsStream("/Pictures/888.jpg")));
+		tableNo_9.setImage(new Image(getClass().getResourceAsStream("/Pictures/999.jpg")));
+		tableNo_10.setImage(new Image(getClass().getResourceAsStream("/Pictures/1010.jpg")));
 	}
 	
 	// 뒤로가기 이미지에 마우스가 들어왔을 때

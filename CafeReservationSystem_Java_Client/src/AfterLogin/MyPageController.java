@@ -48,10 +48,10 @@ public class MyPageController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		logoutImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/24.png")));
-		infoImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/16.png")));
-		reservImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/26.png")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		logoutImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/24.png")));
+		infoImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/16.png")));
+		reservImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/26.png")));
 	}
 	
 	
@@ -83,14 +83,14 @@ public class MyPageController implements Initializable {
 			
 			Optional<ButtonType> result = f.popUp(AlertType.CONFIRMATION, "회원정보 확인 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {						// 팝업창에서 확인 버튼 클릭시
-				f.changeScene("../AfterLogin/MyInfo.fxml", myInfoBtn);	// 회원정보 확인 창으로 화면 전환
+				f.changeScene("/AfterLogin/MyInfo.fxml", myInfoBtn);	// 회원정보 확인 창으로 화면 전환
 			}
 		}
 		// 예약 확인 및 취소 버튼을 눌렀을 때
 		else {
 			Optional<ButtonType> result = f.popUp(AlertType.CONFIRMATION, "예약 확인 화면으로 이동하시겠습니까?", "'확인' 버튼을 누를 시 이동합니다.").showAndWait();
 			if (result.get() == ButtonType.OK) {						// 팝업창에서 확인 버튼 클릭시
-				f.changeScene("../AfterLogin/ReservationCancel.fxml", reservationBtn);	// 예약 창으로 화면 전환
+				f.changeScene("/AfterLogin/ReservationCancel.fxml", reservationBtn);	// 예약 창으로 화면 전환
 			}
 		}
 	}

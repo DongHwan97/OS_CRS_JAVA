@@ -30,8 +30,8 @@ public class StartMenuController implements Initializable {
 		startBtn.setOnAction(event -> btnClicked(event));
 		exitBtn.setOnAction(event -> btnClicked(event));
 		
-		startImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/15.png")));
-		exitImage.setImage(new Image(getClass().getResourceAsStream("../Pictures/12.png")));
+		startImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/15.png")));
+		exitImage.setImage(new Image(getClass().getResourceAsStream("/Pictures/12.png")));
 	}
 	
 	public void btnClicked(ActionEvent e) {

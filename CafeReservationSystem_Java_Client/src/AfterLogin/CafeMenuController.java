@@ -48,19 +48,19 @@ public class CafeMenuController implements Initializable {
 		
 		teduri1.setColor(teduri);
 		
-		back.setImage(new Image(getClass().getResourceAsStream("../Pictures/backBtn.png")));
-		image_1.setImage(new Image(getClass().getResourceAsStream("../Pictures/americano.jpg")));
-		image_2.setImage(new Image(getClass().getResourceAsStream("../Pictures/latte.jpg")));
-		image_3.setImage(new Image(getClass().getResourceAsStream("../Pictures/caramel.jpg")));
-		image_4.setImage(new Image(getClass().getResourceAsStream("../Pictures/greentea.jpg")));
-		image_5.setImage(new Image(getClass().getResourceAsStream("../Pictures/strawberry.jpg")));
-		image_6.setImage(new Image(getClass().getResourceAsStream("../Pictures/banana.jpg")));
-		image_7.setImage(new Image(getClass().getResourceAsStream("../Pictures/icetea.jpg")));
-		image_8.setImage(new Image(getClass().getResourceAsStream("../Pictures/lemon.jpg")));
-		image_9.setImage(new Image(getClass().getResourceAsStream("../Pictures/cake.jpg")));
-		image_10.setImage(new Image(getClass().getResourceAsStream("../Pictures/bread.jpg")));
-		image_11.setImage(new Image(getClass().getResourceAsStream("../Pictures/sandwich.jpg")));
-		image_12.setImage(new Image(getClass().getResourceAsStream("../Pictures/cookie.jpeg")));
+		back.setImage(new Image(getClass().getResourceAsStream("/Pictures/backBtn.png")));
+		image_1.setImage(new Image(getClass().getResourceAsStream("/Pictures/americano.jpg")));
+		image_2.setImage(new Image(getClass().getResourceAsStream("/Pictures/latte.jpg")));
+		image_3.setImage(new Image(getClass().getResourceAsStream("/Pictures/caramel.jpg")));
+		image_4.setImage(new Image(getClass().getResourceAsStream("/Pictures/greentea.jpg")));
+		image_5.setImage(new Image(getClass().getResourceAsStream("/Pictures/strawberry.jpg")));
+		image_6.setImage(new Image(getClass().getResourceAsStream("/Pictures/banana.jpg")));
+		image_7.setImage(new Image(getClass().getResourceAsStream("/Pictures/icetea.jpg")));
+		image_8.setImage(new Image(getClass().getResourceAsStream("/Pictures/lemon.jpg")));
+		image_9.setImage(new Image(getClass().getResourceAsStream("/Pictures/cake.jpg")));
+		image_10.setImage(new Image(getClass().getResourceAsStream("/Pictures/bread.jpg")));
+		image_11.setImage(new Image(getClass().getResourceAsStream("/Pictures/sandwich.jpg")));
+		image_12.setImage(new Image(getClass().getResourceAsStream("/Pictures/cookie.jpeg")));
 	}
 
 	// 뒤로가기 이미지에 마우스가 들어왔을 때
