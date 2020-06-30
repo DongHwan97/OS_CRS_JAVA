@@ -138,7 +138,7 @@ public class Find_IDController implements Initializable {
 				f.wrtieServer("FI_" + name + "_" + jumin1 + jumin2);
 				// (서버로부터 읽어들인 문자열 = id)
 				if ((id = f.readServer()).equals("fail")) {	// 읽어들인 문자열이 fail 이면
-					f.popUp(AlertType.WARNING, "아이디가 존재하지 않습니다!!!", "다시 입력해주시기 바랍니다.").show();
+					f.popUp(AlertType.WARNING, "아이디가 존재하지 않습니다!!", "다시 입력해주시기 바랍니다.").show();
 				} else if (id.equals(null)) {	// 읽어들인 문자열이 null 이면
 					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 				} else {	// 읽어들인 문자열이 정상id이면
