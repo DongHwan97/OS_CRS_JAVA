@@ -99,24 +99,18 @@ public class Find_IDController implements Initializable {
 			
 			try {
 				f.wrtieServer("FI_" + name + "_" + jumin1 + jumin2);
-				
-				System.out.println("3");
 				// (서버로부터 읽어들인 문자열 = id)
 				if ((id = f.readServer()).equals("fail")) {	// 읽어들인 문자열이 fail 이면
-					System.out.println("4");
 					f.popUp(AlertType.WARNING, "아이디가 존재하지 않습니다!!!", "다시 입력해주시기 바랍니다.").show();
 				} else if (id.equals(null)) {	// 읽어들인 문자열이 null 이면
 					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 				} else {	// 읽어들인 문자열이 정상id이면
-					System.out.println("5");
 					f.popUp(AlertType.INFORMATION, "입력하신 정보에 해당하는 아이디는", id + " 입니다!!!").showAndWait();
 					f.changeScene("/BeforeLogin/LoginMenu.fxml", nameField);
 				}
 			} catch(IOException ex) {
 				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 			}
-			
-			//f.changeScene("/BeforeLogin/LoginMenu.fxml", nameField);
 		}
 	}
 
@@ -139,28 +133,21 @@ public class Find_IDController implements Initializable {
 		// 정보를 모두 입력했을 경우
 		else {
 			// 서버로 아이디 찾기용 문자열 전송 ("메시지타입_이름_주민등록번호")
-			System.out.println("7");
 			
 			try {
 				f.wrtieServer("FI_" + name + "_" + jumin1 + jumin2);
-				
-				System.out.println("3");
 				// (서버로부터 읽어들인 문자열 = id)
 				if ((id = f.readServer()).equals("fail")) {	// 읽어들인 문자열이 fail 이면
-					System.out.println("4");
 					f.popUp(AlertType.WARNING, "아이디가 존재하지 않습니다!!!", "다시 입력해주시기 바랍니다.").show();
 				} else if (id.equals(null)) {	// 읽어들인 문자열이 null 이면
 					f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 				} else {	// 읽어들인 문자열이 정상id이면
-					System.out.println("5");
 					f.popUp(AlertType.INFORMATION, "입력하신 정보에 해당하는 아이디는", id + " 입니다!!!").showAndWait();
 					f.changeScene("/BeforeLogin/LoginMenu.fxml", nameField);
 				}
 			} catch(IOException ex) {
 				f.popUp(AlertType.ERROR, "서버와의 연결이 원활하지 않습니다.", "다음에 다시 이용해주시기 바랍니다.").show();
 			}
-			System.out.println("6");
-			//f.changeScene("/BeforeLogin/LoginMenu.fxml", nameField);
 		}
 	}
 }
